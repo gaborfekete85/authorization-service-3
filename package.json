@@ -1,0 +1,26 @@
+{
+  "name": "@authorization-service/source",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "gradle:build": "cd apps/authorization-service && ./gradlew build",
+    "gradle:run": "cd apps/authorization-service && ./gradlew run",
+    "gradle:clean": "cd apps/authorization-service && ./gradlew clean",
+    "gradle:publish": "cd apps/authorization-service && ./gradlew clean build publish jib -PDOCKER_REPOSITORY=gabendockerzone"
+  },
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@nx/js": "20.0.12",
+    "@swc-node/register": "~1.9.1",
+    "@swc/core": "~1.5.7",
+    "@swc/helpers": "~0.5.11",
+    "nx": "20.0.12",
+    "prettier": "^2.6.2",
+    "tslib": "^2.3.0",
+    "typescript": "~5.5.2"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

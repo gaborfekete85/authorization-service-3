@@ -1,0 +1,20 @@
+[2m> [22mnpm run gradle:build
+
+
+> @authorization-service/source@0.0.0 gradle:build
+> cd apps/authorization-service && ./gradlew build
+
+
+[1A[1m<[0;1m-------------> 0% INITIALIZING [43ms][m[38D[1B
+[2A[1m<[0;1m-------------> 0% INITIALIZING [144ms][m[39D[1B[1m> Evaluating settings[m[21D[1B[2A[1m<[0;1m-------------> 0% CONFIGURING [243ms][m[0K[38D[1B[1m> root project > Resolve dependencies of detachedConfiguration1[m[63D[1B[2A[1m<[0;1m-------------> 0% CONFIGURING [342ms][m[38D[1B[1m> root project > Resolve files of configuration ':classpath'[m[0K[60D[1B[2A[1m<[0;1m-------------> 0% CONFIGURING [440ms][m[38D[1B[1m> root project[m[0K[14D[1B[2A[1m<[0;1m-------------> 0% CONFIGURING [543ms][m[38D[2B[2A[1m<[0;1m-------------> 0% CONFIGURING [641ms][m[38D[1B[1m> root project > Extracting toolchain metadata from '/Users/gaborfekete/Library/Java/JavaVirtualMachines/corretto-11.0.21/Contents/Home' (IntelliJ) auto-detected[m[161D[1B[2A[1m<[0;32;1m=============[0;39;1m> 100% CONFIGURING [741ms][m[40D[1B[1m> Resolve dependencies of :detachedConfiguration5 > Resolve dependencies of :detachedConfiguration20[m[0K[100D[1B[2A[1m<[0;32;1m=============[0;39;1m> 100% CONFIGURING [869ms][m[40D[1B[1m> Resolve dependencies of :detachedConfiguration5[m[0K[49D[1B[2A[1m<[0;32;1m=============[0;39;1m> 100% CONFIGURING [944ms][m[40D[2B[2A[1m<[0;32;1m=============[0;39;1m> 100% CONFIGURING [1s][m[0K[37D[2B[1A[1m> Resolve dependencies of :detachedConfiguration63[m[50D[1B[1A[1m> Resolve dependencies of :detachedConfiguration87[m[50D[1B[1A> IDLE[0K[6D[1B[1A[1m> Resolve dependencies of :detachedConfiguration254[m[51D[1B[1A> IDLE[0K[6D[1B[2A[1m<[0;32;1m=============[0;39;1m> 100% CONFIGURING [2s][m[37D[2B[1A[1m> Resolve dependencies of :detachedConfiguration291[m[51D[1B[1A> IDLE[0K[6D[1B[1A[1m> Resolve dependencies of :detachedConfiguration292[m[51D[1B[1A> IDLE[0K[6D[1B[2A[1m<[0;32;1m=============[0;39;1m> 100% CONFIGURING [3s][m[37D[1B[1m> Resolve files of configuration ':detachedConfiguration428'[m[60D[1B[1A[1m> Resolve files of configuration ':detachedConfiguration449'[m[60D[1B[1A[1m> Resolve dependencies of :detachedConfiguration500[m[0K[51D[1B[1A> IDLE[0K[6D[1B[1A[1m> Resolve dependencies of :detachedConfiguration547[m[51D[1B[1A> IDLE[0K[6D[1B[2A[1m<[0;1m-------------> 0% EXECUTING [4s][m[0K[33D[1B[1m> :compileKotlin[m[16D[1B[2A[1m<[0;32;1m=[0;39;1m------------> 13% EXECUTING [4s][m[34D[1B[1m> :processResources[m[19D[1B[2A[1m<[0;32;1m====[0;39;1m---------> 33% EXECUTING [4s][m[34D[1B[1m> :bootJar[m[0K[10D[1B[2A[1m<[0;32;1m=====[0;39;1m--------> 40% EXECUTING [4s][m[34D[1B[1m> :jar[m[0K[6D[1B[2A[1m<[0;32;1m======[0;39;1m-------> 53% EXECUTING [4s][m[34D[1B[1m> :compileTestKotlin > Resolve dependencies of :testKotlinScriptDefExtensions[m[77D[1B[2A[1m<[0;32;1m=======[0;39;1m------> 60% EXECUTING [4s][m[34D[1B[1m> :compileTestJava > Resolve dependencies of :testCompileClasspath[m[0K[66D[1B[2A[1m<[0;32;1m=======[0;39;1m------> 60% EXECUTING [5s][m[34D[1B[1m> :compileTestJava > Resolve files of configuration ':testCompileClasspath'[m[75D[1B[2A[1m<[0;32;1m===========[0;39;1m--> 86% EXECUTING [5s][m[34D[1B[1m> :check[m[0K[8D[1B[2A[0K
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.10.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+[32;1mBUILD SUCCESSFUL[0;39m in 6s
+7 actionable tasks: 7 up-to-date
+[0K
+[0K
+[2A[1m<[0;32;1m=============[0;39;1m> 100% EXECUTING [5s][m[35D[1B> IDLE[6D[1B[2A[1m<[0;1m-------------> 0% WAITING[m[0K[26D[2B[2A[2K[1B[2K[1A[0m[?12l[?25h

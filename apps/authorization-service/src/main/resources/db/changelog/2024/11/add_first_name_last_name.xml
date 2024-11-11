@@ -1,0 +1,13 @@
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet author="contact@feketegabor.com" id="alter-add-first-name-last-name">
+        <sql dbms="postgresql" endDelimiter=";">
+            alter table users add first_name varchar(50);
+            alter table users add last_name varchar(50);
+        </sql>
+    </changeSet>
+</databaseChangeLog>

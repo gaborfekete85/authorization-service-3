@@ -1,0 +1,529 @@
+[NX Daemon Server] - 2024-11-11T00:01:10.725Z - Started listening on: /var/folders/jg/9kr58cnd34q4gwx2sf7gttn00000gn/T/a0ba9a3369aec1cfde0e/d.sock
+[NX Daemon Server] - 2024-11-11T00:01:10.726Z - [WATCHER]: Subscribed to changes within: /Users/gaborfekete/home_projects/nx/authorization-service (native)
+[NX Daemon Server] - 2024-11-11T00:01:10.735Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-11T00:01:10.735Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-11-11T00:01:10.736Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-11T00:01:10.737Z - [REQUEST]: Responding to the client. Shutdown initiated
+[NX Daemon Server] - 2024-11-11T00:01:10.737Z - Done responding to the client Shutdown initiated
+[NX Daemon Server] - 2024-11-11T00:01:10.737Z - Handled FORCE_SHUTDOWN. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-11-11T00:01:10.738Z - [WATCHER]: Stopping the watcher for /Users/gaborfekete/home_projects/nx/authorization-service (sources)
+[NX Daemon Server] - 2024-11-11T00:01:10.738Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-11-11T00:01:10.738Z - [WATCHER]: Stopping the watcher for /Users/gaborfekete/home_projects/nx/authorization-service (outputs)
+[NX Daemon Server] - 2024-11-11T00:08:34.166Z - Started listening on: /var/folders/jg/9kr58cnd34q4gwx2sf7gttn00000gn/T/a0ba9a3369aec1cfde0e/d.sock
+[NX Daemon Server] - 2024-11-11T00:08:34.173Z - [WATCHER]: Subscribed to changes within: /Users/gaborfekete/home_projects/nx/authorization-service (native)
+[NX Daemon Server] - 2024-11-11T00:08:34.174Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-11T00:08:34.175Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-11-11T00:08:34.177Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-11T00:08:34.178Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-11-11T00:08:34.482Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:08:34.482Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:08:34.482Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:08:34.487Z - Time taken for 'loadNxPlugins' 302.2137079834938ms
+[NX Daemon Server] - 2024-11-11T00:08:34.501Z - Time taken for 'build-project-configs' 7.776250004768372ms
+[NX Daemon Server] - 2024-11-11T00:08:34.502Z - Time taken for '@nx/js/typescript:createDependencies' 2.041249990463257ms
+[NX Daemon Server] - 2024-11-11T00:08:34.510Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:08:34.510Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-11-11T00:08:34.510Z - Time taken for 'total for creating and serializing project graph' 332.29862505197525ms
+[NX Daemon Server] - 2024-11-11T00:08:34.511Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-11-11T00:08:34.511Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 332. Response time: 1.
+[NX Daemon Server] - 2024-11-11T00:08:34.546Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-11-11T00:08:34.546Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-11-11T00:08:34.546Z - Handled HASH_TASKS. Handling time: 2. Response time: 0.
+[NX Daemon Server] - 2024-11-11T00:08:34.643Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2024-11-11T00:08:34.643Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2024-11-11T00:08:34.643Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 13. Response time: 0.
+[NX Daemon Server] - 2024-11-11T00:08:34.928Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-11-11T00:08:34.928Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-11-11T00:08:34.928Z - Handled RECORD_OUTPUTS_HASH. Handling time: 5. Response time: 0.
+[NX Daemon Server] - 2024-11-11T00:08:35.030Z - [REQUEST]: Responding to the client. PROCESS_IN_BACKGROUND
+[NX Daemon Server] - 2024-11-11T00:08:35.030Z - Done responding to the client PROCESS_IN_BACKGROUND
+[NX Daemon Server] - 2024-11-11T00:08:35.030Z - Handled PROCESS_IN_BACKGROUND. Handling time: 80. Response time: 0.
+[NX Daemon Server] - 2024-11-11T00:08:35.030Z - Uploading file artifacts
+[NX Daemon Server] - 2024-11-11T00:08:35.061Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-11-11T00:08:35.264Z - Done uploading file artifacts
+[NX Daemon Server] - 2024-11-11T00:08:35.264Z - Sending EndRun request
+[NX Daemon Server] - 2024-11-11T00:08:35.410Z - Done sending EndRun request
+[NX Daemon Server] - 2024-11-11T00:09:18.425Z - [WATCHER]: package.json was modified
+[NX Daemon Server] - 2024-11-11T00:09:18.428Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:18.533Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:09:18.533Z - [REQUEST]: package.json
+[NX Daemon Server] - 2024-11-11T00:09:18.533Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:09:18.542Z - Time taken for 'hash changed files from watcher' 1.3197500109672546ms
+[NX Daemon Server] - 2024-11-11T00:09:18.558Z - Time taken for 'build-project-configs' 16.675999999046326ms
+[NX Daemon Server] - 2024-11-11T00:09:18.561Z - Time taken for '@nx/js/typescript:createDependencies' 3.260707974433899ms
+[NX Daemon Server] - 2024-11-11T00:09:18.569Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:09:18.569Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:09:18.569Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:09:18.569Z - Time taken for 'total execution time for createProjectGraph()' 11.754000008106232ms
+[NX Daemon Server] - 2024-11-11T00:09:21.794Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-11T00:09:21.794Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-11-11T00:09:21.794Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-11T00:09:21.795Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-11-11T00:09:21.795Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-11-11T00:09:21.796Z - Time taken for 'total for creating and serializing project graph' 0.18370801210403442ms
+[NX Daemon Server] - 2024-11-11T00:09:21.797Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-11-11T00:09:21.797Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX Daemon Server] - 2024-11-11T00:09:21.829Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-11-11T00:09:21.829Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-11-11T00:09:21.829Z - Handled HASH_TASKS. Handling time: 2. Response time: 0.
+[NX Daemon Server] - 2024-11-11T00:09:21.909Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2024-11-11T00:09:21.909Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2024-11-11T00:09:21.909Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-11-11T00:09:32.093Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 55 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:09:32.094Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:32.147Z - [WATCHER]: apps/authorization-service/.gradle/file-system.probe was modified
+[NX Daemon Server] - 2024-11-11T00:09:32.147Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:32.196Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:09:32.196Z - [REQUEST]: apps/authorization-service/.gradle/file-system.probe
+[NX Daemon Server] - 2024-11-11T00:09:32.196Z - [REQUEST]: apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/AuthController.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/UserController.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/exception/ResourceNotFoundException.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/exception/BadRequestException.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/oauth2/CustomOAuth2UserService.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/dto/RefreshTokenRequest.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/dto/PasswordResetRequest.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/AuthorizationServiceApplication.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/config/SecurityConfiguration.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/exception/OAuth2AuthenticationProcessingException.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/persistence/entities/Role.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/mapper/config/CentralConfig.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/dto/SignInRequest.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/auth/AuthenticationService$1.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/dto/UpdateImageRequest.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/auth/AuthenticationService.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/model/AuthProvider.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/filter/CustomSavedRequestFilter.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/auth/RestAuthenticationEntryPoint.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/oauth2/HttpCookieOAuth2AuthorizationRequestRepository.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/oauth2/user/CustomOauth2UserInfo.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/auth/AuthenticationService$2.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/utils/CookieUtils.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/filter/JwtAuthenticationFilter.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/dto/SignInResponse.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/persistence/repository/UserRepository.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/auth/JdbcUserDetailsService.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/dto/SignUpResponse.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/config/WebMvcConfig.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/model/UserDetail.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/dto/SignInResponse$SignInResponseBuilder.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/config/AppProperties.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/persistence/repository/RoleRepository.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/oauth2/user/GithubOAuth2UserInfo.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/oauth2/user/FacebookOAuth2UserInfo.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/mapper/UserDetailMapperImpl.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/persistence/entities/User.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/oauth2/user/OAuth2UserInfo.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/config/AppProperties$Auth.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/config/AppProperties$OAuth2.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/utils/SecurityUtil.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/persistence/entities/AuthProvider.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/oauth2/CustomOIDCOAuth2UserService.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/oauth2/user/OAuth2UserInfoFactory.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/oauth2/OAuth2AuthenticationFailureHandler.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/AdminController.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/jwt/JWTService.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/persistence/entities/ERole.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/oauth2/user/GoogleOAuth2UserInfo.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/dto/SignUpRequest.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/dto/UpdateRoleRequest.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/jwt/DefaultJwtService.class,apps/authorization-service/build/generated/sources/annotationProcessor/java/main/com/infra/authorization/mapper/UserDetailMapperImpl.java,apps/authorization-service/build/classes/java/main/com/infra/authorization/mapper/UserDetailMapper.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/oauth2/OAuth2AuthenticationSuccessHandler.class
+[NX Daemon Server] - 2024-11-11T00:09:32.198Z - Time taken for 'hash changed files from watcher' 0.29245901107788086ms
+[NX Daemon Server] - 2024-11-11T00:09:32.205Z - Time taken for 'build-project-configs' 6.846415996551514ms
+[NX Daemon Server] - 2024-11-11T00:09:32.207Z - Time taken for '@nx/js/typescript:createDependencies' 2.260083019733429ms
+[NX Daemon Server] - 2024-11-11T00:09:32.211Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:09:32.212Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:09:32.212Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:09:32.212Z - Time taken for 'total execution time for createProjectGraph()' 6.580999970436096ms
+[NX Daemon Server] - 2024-11-11T00:09:37.081Z - [WATCHER]: apps/authorization-service/build/generated/sources/annotationProcessor/java/main/com/infra/authorization/mapper/UserDetailMapperImpl.java was created or restored
+[NX Daemon Server] - 2024-11-11T00:09:37.082Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:37.184Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:09:37.184Z - [REQUEST]: apps/authorization-service/build/generated/sources/annotationProcessor/java/main/com/infra/authorization/mapper/UserDetailMapperImpl.java
+[NX Daemon Server] - 2024-11-11T00:09:37.184Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:09:37.187Z - Time taken for 'hash changed files from watcher' 0.25725001096725464ms
+[NX Daemon Server] - 2024-11-11T00:09:37.191Z - Time taken for 'build-project-configs' 4.773665964603424ms
+[NX Daemon Server] - 2024-11-11T00:09:37.193Z - Time taken for '@nx/js/typescript:createDependencies' 2.1605420112609863ms
+[NX Daemon Server] - 2024-11-11T00:09:37.202Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:09:37.202Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:09:37.202Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:09:37.202Z - Time taken for 'total execution time for createProjectGraph()' 7.957082986831665ms
+[NX Daemon Server] - 2024-11-11T00:09:37.416Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:37.417Z - [WATCHER]: apps/authorization-service/build/generated/sources/annotationProcessor/java/main/com/infra/authorization/mapper/UserDetailMapperImpl.java was created or restored
+[NX Daemon Server] - 2024-11-11T00:09:37.518Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:09:37.518Z - [REQUEST]: apps/authorization-service/build/generated/sources/annotationProcessor/java/main/com/infra/authorization/mapper/UserDetailMapperImpl.java
+[NX Daemon Server] - 2024-11-11T00:09:37.518Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:09:37.520Z - Time taken for 'hash changed files from watcher' 0.14179199934005737ms
+[NX Daemon Server] - 2024-11-11T00:09:37.522Z - Time taken for 'build-project-configs' 2.4701669812202454ms
+[NX Daemon Server] - 2024-11-11T00:09:37.523Z - Time taken for '@nx/js/typescript:createDependencies' 1.2422919869422913ms
+[NX Daemon Server] - 2024-11-11T00:09:37.529Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:09:37.529Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:09:37.529Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:09:37.529Z - Time taken for 'total execution time for createProjectGraph()' 5.20974999666214ms
+[NX Daemon Server] - 2024-11-11T00:09:38.498Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:38.498Z - [WATCHER]: apps/authorization-service/build/classes/java/main/com/infra/authorization/config/WebMvcConfig.class was created or restored
+[NX Daemon Server] - 2024-11-11T00:09:38.559Z - [WATCHER]: 3 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:09:38.559Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:38.600Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:09:38.600Z - [REQUEST]: apps/authorization-service/build/classes/java/main/com/infra/authorization/config/WebMvcConfig.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/config/AppProperties.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/config/AppProperties$Auth.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/config/AppProperties$OAuth2.class
+[NX Daemon Server] - 2024-11-11T00:09:38.600Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:09:38.601Z - Time taken for 'hash changed files from watcher' 0.38475000858306885ms
+[NX Daemon Server] - 2024-11-11T00:09:38.604Z - Time taken for 'build-project-configs' 2.1104169487953186ms
+[NX Daemon Server] - 2024-11-11T00:09:38.605Z - Time taken for '@nx/js/typescript:createDependencies' 1.0384169816970825ms
+[NX Daemon Server] - 2024-11-11T00:09:38.609Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:09:38.609Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:09:38.609Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:09:38.609Z - Time taken for 'total execution time for createProjectGraph()' 4.56979101896286ms
+[NX Daemon Server] - 2024-11-11T00:09:38.972Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:38.973Z - [WATCHER]: apps/authorization-service/build/classes/java/main/com/infra/authorization/config/SecurityConfiguration.class was created or restored
+[NX Daemon Server] - 2024-11-11T00:09:39.032Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:39.032Z - [WATCHER]: 2 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:09:39.074Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:09:39.074Z - [REQUEST]: apps/authorization-service/build/classes/java/main/com/infra/authorization/config/SecurityConfiguration.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/filter/JwtAuthenticationFilter.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/oauth2/CustomOAuth2UserService.class
+[NX Daemon Server] - 2024-11-11T00:09:39.074Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:09:39.075Z - Time taken for 'hash changed files from watcher' 0.2695000171661377ms
+[NX Daemon Server] - 2024-11-11T00:09:39.079Z - Time taken for 'build-project-configs' 2.9681249856948853ms
+[NX Daemon Server] - 2024-11-11T00:09:39.079Z - Time taken for '@nx/js/typescript:createDependencies' 1.268166959285736ms
+[NX Daemon Server] - 2024-11-11T00:09:39.083Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:09:39.083Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:09:39.083Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:09:39.083Z - Time taken for 'total execution time for createProjectGraph()' 3.771500051021576ms
+[NX Daemon Server] - 2024-11-11T00:09:39.117Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:39.118Z - [WATCHER]: apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/oauth2/HttpCookieOAuth2AuthorizationRequestRepository.class was created or restored
+[NX Daemon Server] - 2024-11-11T00:09:39.181Z - [WATCHER]: 2 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:09:39.181Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:39.220Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:09:39.220Z - [REQUEST]: apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/oauth2/HttpCookieOAuth2AuthorizationRequestRepository.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/oauth2/OAuth2AuthenticationFailureHandler.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/oauth2/OAuth2AuthenticationSuccessHandler.class
+[NX Daemon Server] - 2024-11-11T00:09:39.220Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:09:39.222Z - Time taken for 'hash changed files from watcher' 0.2650830149650574ms
+[NX Daemon Server] - 2024-11-11T00:09:39.226Z - Time taken for 'build-project-configs' 3.477791965007782ms
+[NX Daemon Server] - 2024-11-11T00:09:39.228Z - Time taken for '@nx/js/typescript:createDependencies' 2.2902920246124268ms
+[NX Daemon Server] - 2024-11-11T00:09:39.233Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:09:39.233Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:09:39.233Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:09:39.233Z - Time taken for 'total execution time for createProjectGraph()' 6.801874995231628ms
+[NX Daemon Server] - 2024-11-11T00:09:39.235Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:39.235Z - [WATCHER]: 3 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:09:39.337Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:09:39.337Z - [REQUEST]: apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/auth/JdbcUserDetailsService.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/filter/CustomSavedRequestFilter.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/jwt/JWTService.class
+[NX Daemon Server] - 2024-11-11T00:09:39.337Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:09:39.338Z - Time taken for 'hash changed files from watcher' 0.19499999284744263ms
+[NX Daemon Server] - 2024-11-11T00:09:39.341Z - Time taken for 'build-project-configs' 2.312333047389984ms
+[NX Daemon Server] - 2024-11-11T00:09:39.342Z - Time taken for '@nx/js/typescript:createDependencies' 1.453707993030548ms
+[NX Daemon Server] - 2024-11-11T00:09:39.346Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:09:39.346Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:09:39.346Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:09:39.346Z - Time taken for 'total execution time for createProjectGraph()' 3.988833010196686ms
+[NX Daemon Server] - 2024-11-11T00:09:39.346Z - [WATCHER]: apps/authorization-service/build/classes/java/main/com/infra/authorization/model/UserDetail.class was created or restored
+[NX Daemon Server] - 2024-11-11T00:09:39.346Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:39.422Z - [WATCHER]: 4 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:09:39.422Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:39.450Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:09:39.450Z - [REQUEST]: apps/authorization-service/build/classes/java/main/com/infra/authorization/model/UserDetail.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/persistence/entities/Role.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/model/AuthProvider.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/persistence/entities/ERole.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/persistence/entities/User.class
+[NX Daemon Server] - 2024-11-11T00:09:39.450Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:09:39.452Z - Time taken for 'hash changed files from watcher' 0.49833399057388306ms
+[NX Daemon Server] - 2024-11-11T00:09:39.455Z - Time taken for 'build-project-configs' 2.2233749628067017ms
+[NX Daemon Server] - 2024-11-11T00:09:39.457Z - Time taken for '@nx/js/typescript:createDependencies' 3.2814589738845825ms
+[NX Daemon Server] - 2024-11-11T00:09:39.463Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:09:39.463Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:09:39.463Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:09:39.463Z - Time taken for 'total execution time for createProjectGraph()' 6.601666986942291ms
+[NX Daemon Server] - 2024-11-11T00:09:39.479Z - [WATCHER]: 6 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:09:39.479Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:39.542Z - [WATCHER]: 2 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:09:39.542Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:39.581Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:09:39.581Z - [REQUEST]: apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/dto/SignUpRequest.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/mapper/UserDetailMapper.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/persistence/repository/UserRepository.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/persistence/repository/RoleRepository.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/mapper/config/CentralConfig.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/oauth2/user/OAuth2UserInfo.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/dto/SignInRequest.class
+[NX Daemon Server] - 2024-11-11T00:09:39.581Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:09:39.582Z - Time taken for 'hash changed files from watcher' 0.49562495946884155ms
+[NX Daemon Server] - 2024-11-11T00:09:39.586Z - Time taken for 'build-project-configs' 2.5412089824676514ms
+[NX Daemon Server] - 2024-11-11T00:09:39.587Z - Time taken for '@nx/js/typescript:createDependencies' 1.89095801115036ms
+[NX Daemon Server] - 2024-11-11T00:09:39.596Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:09:39.596Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:09:39.596Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:09:39.596Z - Time taken for 'total execution time for createProjectGraph()' 9.690500020980835ms
+[NX Daemon Server] - 2024-11-11T00:09:39.646Z - [WATCHER]: 6 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:09:39.646Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:39.708Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:39.708Z - [WATCHER]: 5 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:09:39.748Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:09:39.748Z - [REQUEST]: apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/dto/UpdateRoleRequest.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/dto/SignUpResponse.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/dto/PasswordResetRequest.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/utils/SecurityUtil.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/utils/CookieUtils.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/dto/RefreshTokenRequest.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/dto/UpdateImageRequest.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/dto/SignInResponse$SignInResponseBuilder.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/dto/SignInResponse.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/AdminController.class
+[NX Daemon Server] - 2024-11-11T00:09:39.748Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:09:39.750Z - Time taken for 'hash changed files from watcher' 0.6095000505447388ms
+[NX Daemon Server] - 2024-11-11T00:09:39.753Z - Time taken for 'build-project-configs' 2.701959013938904ms
+[NX Daemon Server] - 2024-11-11T00:09:39.753Z - Time taken for '@nx/js/typescript:createDependencies' 1.1546249985694885ms
+[NX Daemon Server] - 2024-11-11T00:09:39.757Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:09:39.757Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:09:39.757Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:09:39.757Z - Time taken for 'total execution time for createProjectGraph()' 3.7742080092430115ms
+[NX Daemon Server] - 2024-11-11T00:09:39.759Z - [WATCHER]: apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/AdminController.class was created or restored
+[NX Daemon Server] - 2024-11-11T00:09:39.759Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:39.824Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:39.824Z - [WATCHER]: apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/AuthController.class was created or restored
+[NX Daemon Server] - 2024-11-11T00:09:39.861Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:09:39.861Z - [REQUEST]: apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/AdminController.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/AuthController.class
+[NX Daemon Server] - 2024-11-11T00:09:39.861Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:09:39.863Z - Time taken for 'hash changed files from watcher' 0.21475005149841309ms
+[NX Daemon Server] - 2024-11-11T00:09:39.865Z - Time taken for 'build-project-configs' 2.2861250042915344ms
+[NX Daemon Server] - 2024-11-11T00:09:39.866Z - Time taken for '@nx/js/typescript:createDependencies' 1.28187495470047ms
+[NX Daemon Server] - 2024-11-11T00:09:39.870Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:09:39.870Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:09:39.870Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:09:39.870Z - Time taken for 'total execution time for createProjectGraph()' 4.108666956424713ms
+[NX Daemon Server] - 2024-11-11T00:09:39.913Z - [WATCHER]: 3 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:09:39.913Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:40.014Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:09:40.014Z - [REQUEST]: apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/auth/AuthenticationService$1.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/auth/AuthenticationService.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/auth/AuthenticationService$2.class
+[NX Daemon Server] - 2024-11-11T00:09:40.014Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:09:40.015Z - Time taken for 'hash changed files from watcher' 0.3221249580383301ms
+[NX Daemon Server] - 2024-11-11T00:09:40.019Z - Time taken for 'build-project-configs' 2.822125017642975ms
+[NX Daemon Server] - 2024-11-11T00:09:40.020Z - Time taken for '@nx/js/typescript:createDependencies' 1.6535829901695251ms
+[NX Daemon Server] - 2024-11-11T00:09:40.024Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:09:40.024Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:09:40.024Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:09:40.024Z - Time taken for 'total execution time for createProjectGraph()' 4.48233300447464ms
+[NX Daemon Server] - 2024-11-11T00:09:40.072Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:40.072Z - [WATCHER]: 6 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:09:40.174Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:09:40.174Z - [REQUEST]: apps/authorization-service/build/classes/java/main/com/infra/authorization/exception/BadRequestException.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/persistence/entities/AuthProvider.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/exception/ResourceNotFoundException.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/controller/UserController.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/AuthorizationServiceApplication.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/exception/OAuth2AuthenticationProcessingException.class
+[NX Daemon Server] - 2024-11-11T00:09:40.174Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:09:40.175Z - Time taken for 'hash changed files from watcher' 0.3329169750213623ms
+[NX Daemon Server] - 2024-11-11T00:09:40.178Z - Time taken for 'build-project-configs' 2.712166965007782ms
+[NX Daemon Server] - 2024-11-11T00:09:40.180Z - Time taken for '@nx/js/typescript:createDependencies' 2.486542046070099ms
+[NX Daemon Server] - 2024-11-11T00:09:40.185Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:09:40.185Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:09:40.185Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:09:40.185Z - Time taken for 'total execution time for createProjectGraph()' 5.4516249895095825ms
+[NX Daemon Server] - 2024-11-11T00:09:40.253Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:40.253Z - [WATCHER]: 5 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:09:40.305Z - [WATCHER]: 3 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:09:40.306Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:40.355Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:09:40.355Z - [REQUEST]: apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/auth/RestAuthenticationEntryPoint.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/oauth2/user/OAuth2UserInfoFactory.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/jwt/DefaultJwtService.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/oauth2/user/CustomOauth2UserInfo.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/oauth2/user/GithubOAuth2UserInfo.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/oauth2/user/FacebookOAuth2UserInfo.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/oauth2/user/GoogleOAuth2UserInfo.class
+[NX Daemon Server] - 2024-11-11T00:09:40.355Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:09:40.356Z - Time taken for 'hash changed files from watcher' 0.29387497901916504ms
+[NX Daemon Server] - 2024-11-11T00:09:40.359Z - Time taken for 'build-project-configs' 2.517792046070099ms
+[NX Daemon Server] - 2024-11-11T00:09:40.360Z - Time taken for '@nx/js/typescript:createDependencies' 1.0992920398712158ms
+[NX Daemon Server] - 2024-11-11T00:09:40.363Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:09:40.363Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:09:40.363Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:09:40.363Z - Time taken for 'total execution time for createProjectGraph()' 3.4909160137176514ms
+[NX Daemon Server] - 2024-11-11T00:09:40.390Z - [WATCHER]: 2 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:09:40.390Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:40.491Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:09:40.491Z - [REQUEST]: apps/authorization-service/build/classes/java/main/com/infra/authorization/services/security/oauth2/CustomOIDCOAuth2UserService.class,apps/authorization-service/build/classes/java/main/com/infra/authorization/mapper/UserDetailMapperImpl.class
+[NX Daemon Server] - 2024-11-11T00:09:40.491Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:09:40.492Z - Time taken for 'hash changed files from watcher' 0.25041699409484863ms
+[NX Daemon Server] - 2024-11-11T00:09:40.495Z - Time taken for 'build-project-configs' 2.762250006198883ms
+[NX Daemon Server] - 2024-11-11T00:09:40.496Z - Time taken for '@nx/js/typescript:createDependencies' 1.6311669945716858ms
+[NX Daemon Server] - 2024-11-11T00:09:40.501Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:09:40.502Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:09:40.502Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:09:40.502Z - Time taken for 'total execution time for createProjectGraph()' 4.579832971096039ms
+[NX Daemon Server] - 2024-11-11T00:09:41.027Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:41.091Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:41.273Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 15 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:09:41.274Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:41.397Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:41.397Z - [WATCHER]: 15 file(s) created or restored, 0 file(s) modified, 1 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:09:41.472Z - [WATCHER]: 1 file(s) created or restored, 0 file(s) modified, 1 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:09:41.472Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:41.476Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:09:41.476Z - [REQUEST]: apps/authorization-service/build/resources/main/db/db.changelog-master.xml,apps/authorization-service/build/resources/main/db/changelog/2020/06/user_roles.xml,apps/authorization-service/build/resources/main/application.yaml,apps/authorization-service/build/resources/main/db/changelog/2024/11/add_first_name_last_name.xml,apps/authorization-service/build/resources/main/db/changelog/2022/01/table_users_nf.xml,apps/authorization-service/build/resources/main/db/baseline.sql,apps/authorization-service/build/resources/main/db/changelog/2022/02/baseline_user.xml,apps/authorization-service/build/resources/main/db/drop.sql,apps/authorization-service/build/resources/main/db/changelog/2022/02/baseline_user2.xml,apps/authorization-service/build/resources/main/db/changelog/2020/06/roles.xml,apps/authorization-service/build/resources/main/db/changelog/2022/01/baseline.xml,apps/authorization-service/build/resources/main/db/changelog/2020/06/baseline.sql,apps/authorization-service/build/resources/main/db/changelog/2020/06/users_simple.xml,apps/authorization-service/build/resources/main/db/changelog/2021/09/table_users_09_10_01_new_field.xml,apps/authorization-service/build/resources/main/db/changelog/2020/06/users.xml,apps/authorization-service/build/resolvedMainClassName
+[NX Daemon Server] - 2024-11-11T00:09:41.476Z - [REQUEST]: apps/authorization-service/build/libs/authorization-service-0.0.1-SNAPSHOT.jar
+[NX Daemon Server] - 2024-11-11T00:09:41.477Z - Time taken for 'hash changed files from watcher' 0.5346249938011169ms
+[NX Daemon Server] - 2024-11-11T00:09:41.482Z - Time taken for 'build-project-configs' 4.126416027545929ms
+[NX Daemon Server] - 2024-11-11T00:09:41.483Z - Time taken for '@nx/js/typescript:createDependencies' 1.7159579992294312ms
+[NX Daemon Server] - 2024-11-11T00:09:41.486Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:09:41.486Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:09:41.486Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:09:41.486Z - Time taken for 'total execution time for createProjectGraph()' 4.020166039466858ms
+[NX Daemon Server] - 2024-11-11T00:09:42.148Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:42.722Z - [WATCHER]: apps/authorization-service/build/libs/authorization-service-0.0.1-SNAPSHOT.jar was created or restored
+[NX Daemon Server] - 2024-11-11T00:09:42.723Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:42.824Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:09:42.824Z - [REQUEST]: apps/authorization-service/build/libs/authorization-service-0.0.1-SNAPSHOT.jar
+[NX Daemon Server] - 2024-11-11T00:09:42.824Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:09:42.827Z - Time taken for 'hash changed files from watcher' 0.41279202699661255ms
+[NX Daemon Server] - 2024-11-11T00:09:42.846Z - Time taken for 'build-project-configs' 16.939083993434906ms
+[NX Daemon Server] - 2024-11-11T00:09:42.847Z - Time taken for '@nx/js/typescript:createDependencies' 1.9169999957084656ms
+[NX Daemon Server] - 2024-11-11T00:09:42.852Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:09:42.852Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:09:42.852Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:09:42.852Z - Time taken for 'total execution time for createProjectGraph()' 6.964334011077881ms
+[NX Daemon Server] - 2024-11-11T00:09:43.438Z - [WATCHER]: apps/authorization-service/build/libs/authorization-service-0.0.1-SNAPSHOT.jar was modified
+[NX Daemon Server] - 2024-11-11T00:09:43.438Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:43.686Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:09:43.686Z - [REQUEST]: apps/authorization-service/build/libs/authorization-service-0.0.1-SNAPSHOT.jar
+[NX Daemon Server] - 2024-11-11T00:09:43.686Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:09:43.688Z - [WATCHER]: apps/authorization-service/build/libs/authorization-service-0.0.1-SNAPSHOT-plain.jar was created or restored
+[NX Daemon Server] - 2024-11-11T00:09:43.688Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:43.688Z - Time taken for 'hash changed files from watcher' 46.102708995342255ms
+[NX Daemon Server] - 2024-11-11T00:09:43.691Z - Time taken for 'build-project-configs' 3.4915000200271606ms
+[NX Daemon Server] - 2024-11-11T00:09:43.692Z - Time taken for '@nx/js/typescript:createDependencies' 1.3954169750213623ms
+[NX Daemon Server] - 2024-11-11T00:09:43.696Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:09:43.697Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:09:43.697Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:09:43.697Z - Time taken for 'total execution time for createProjectGraph()' 4.243291020393372ms
+[NX Daemon Server] - 2024-11-11T00:09:43.748Z - [WATCHER]: 1 file(s) created or restored, 0 file(s) modified, 1 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:09:43.748Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:43.790Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:09:43.790Z - [REQUEST]: apps/authorization-service/build/libs/authorization-service-0.0.1-SNAPSHOT-plain.jar
+[NX Daemon Server] - 2024-11-11T00:09:43.790Z - [REQUEST]: apps/authorization-service/build/classes/java/test/com/infra/authorization/AuthorizationServiceApplicationTests.class
+[NX Daemon Server] - 2024-11-11T00:09:43.792Z - Time taken for 'hash changed files from watcher' 0.24354100227355957ms
+[NX Daemon Server] - 2024-11-11T00:09:43.795Z - Time taken for 'build-project-configs' 3.1758750081062317ms
+[NX Daemon Server] - 2024-11-11T00:09:43.797Z - Time taken for '@nx/js/typescript:createDependencies' 2.6530839800834656ms
+[NX Daemon Server] - 2024-11-11T00:09:43.800Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:09:43.800Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:09:43.800Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:09:43.800Z - Time taken for 'total execution time for createProjectGraph()' 4.707665979862213ms
+[NX Daemon Server] - 2024-11-11T00:09:44.598Z - [WATCHER]: apps/authorization-service/build/classes/java/test/com/infra/authorization/AuthorizationServiceApplicationTests.class was created or restored
+[NX Daemon Server] - 2024-11-11T00:09:44.601Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:44.703Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:09:44.703Z - [REQUEST]: apps/authorization-service/build/classes/java/test/com/infra/authorization/AuthorizationServiceApplicationTests.class
+[NX Daemon Server] - 2024-11-11T00:09:44.703Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:09:44.704Z - Time taken for 'hash changed files from watcher' 0.3884999752044678ms
+[NX Daemon Server] - 2024-11-11T00:09:44.709Z - Time taken for 'build-project-configs' 4.228332996368408ms
+[NX Daemon Server] - 2024-11-11T00:09:44.710Z - Time taken for '@nx/js/typescript:createDependencies' 1.659250020980835ms
+[NX Daemon Server] - 2024-11-11T00:09:44.714Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:09:44.714Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:09:44.714Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:09:44.714Z - Time taken for 'total execution time for createProjectGraph()' 4.694957971572876ms
+[NX Daemon Server] - 2024-11-11T00:09:44.769Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:44.791Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 10 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:09:44.870Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:44.871Z - [WATCHER]: apps/authorization-service/build/test-results/test/binary/output.bin was created or restored
+[NX Daemon Server] - 2024-11-11T00:09:44.992Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:09:44.993Z - [REQUEST]: apps/authorization-service/build/test-results/test/binary/output.bin
+[NX Daemon Server] - 2024-11-11T00:09:44.993Z - [REQUEST]: apps/authorization-service/build/reports/tests/test/packages/com.infra.authorization.html,apps/authorization-service/build/reports/tests/test/index.html,apps/authorization-service/build/reports/tests/test/classes/com.infra.authorization.AuthorizationServiceApplicationTests.html,apps/authorization-service/build/reports/tests/test/css/base-style.css,apps/authorization-service/build/reports/tests/test/css/style.css,apps/authorization-service/build/test-results/test/TEST-com.infra.authorization.AuthorizationServiceApplicationTests.xml,apps/authorization-service/build/reports/tests/test/js/report.js,apps/authorization-service/build/test-results/test/binary/results.bin,apps/authorization-service/build/test-results/test/binary/output.bin.idx
+[NX Daemon Server] - 2024-11-11T00:09:44.995Z - Time taken for 'hash changed files from watcher' 0.33491700887680054ms
+[NX Daemon Server] - 2024-11-11T00:09:45.006Z - Time taken for 'build-project-configs' 10.535957992076874ms
+[NX Daemon Server] - 2024-11-11T00:09:45.007Z - Time taken for '@nx/js/typescript:createDependencies' 2.079792022705078ms
+[NX Daemon Server] - 2024-11-11T00:09:45.011Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:09:45.011Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:09:45.011Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:09:45.011Z - Time taken for 'total execution time for createProjectGraph()' 5.325500011444092ms
+[NX Daemon Server] - 2024-11-11T00:09:58.711Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:58.714Z - [WATCHER]: 6 file(s) created or restored, 1 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:09:58.774Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:58.774Z - [WATCHER]: 6 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:09:58.815Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:09:58.815Z - [REQUEST]: apps/authorization-service/build/test-results/test/TEST-com.infra.authorization.AuthorizationServiceApplicationTests.xml,apps/authorization-service/build/reports/tests/test/classes/com.infra.authorization.AuthorizationServiceApplicationTests.html,apps/authorization-service/build/reports/tests/test/index.html,apps/authorization-service/build/reports/tests/test/packages/com.infra.authorization.html,apps/authorization-service/build/test-results/test/binary/output.bin.idx,apps/authorization-service/build/test-results/test/binary/results.bin,apps/authorization-service/build/test-results/test/binary/output.bin,apps/authorization-service/build/reports/tests/test/css/base-style.css,apps/authorization-service/build/reports/tests/test/js/report.js,apps/authorization-service/build/reports/tests/test/css/style.css
+[NX Daemon Server] - 2024-11-11T00:09:58.815Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:09:58.817Z - Time taken for 'hash changed files from watcher' 0.5413749814033508ms
+[NX Daemon Server] - 2024-11-11T00:09:58.823Z - Time taken for 'build-project-configs' 5.710542023181915ms
+[NX Daemon Server] - 2024-11-11T00:09:58.824Z - Time taken for '@nx/js/typescript:createDependencies' 1.517084002494812ms
+[NX Daemon Server] - 2024-11-11T00:09:58.829Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:09:58.830Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:09:58.830Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:09:58.830Z - Time taken for 'total execution time for createProjectGraph()' 5.043375015258789ms
+[NX Daemon Server] - 2024-11-11T00:09:58.859Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:09:58.859Z - [WATCHER]: 0 file(s) created or restored, 8 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:09:59.064Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:09:59.064Z - [REQUEST]: apps/authorization-service/.gradle/8.10.2/fileChanges/last-build.bin,apps/authorization-service/.gradle/8.10.2/executionHistory/executionHistory.bin,apps/authorization-service/.gradle/8.10.2/fileHashes/fileHashes.lock,apps/authorization-service/.gradle/8.10.2/executionHistory/executionHistory.lock,apps/authorization-service/.gradle/8.10.2/checksums/checksums.lock,apps/authorization-service/.gradle/buildOutputCleanup/buildOutputCleanup.lock,apps/authorization-service/.gradle/8.10.2/fileHashes/fileHashes.bin,apps/authorization-service/.gradle/buildOutputCleanup/outputFiles.bin
+[NX Daemon Server] - 2024-11-11T00:09:59.064Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:09:59.065Z - Time taken for 'hash changed files from watcher' 2.755542039871216ms
+[NX Daemon Server] - 2024-11-11T00:09:59.070Z - Time taken for 'build-project-configs' 3.414667010307312ms
+[NX Daemon Server] - 2024-11-11T00:09:59.072Z - Time taken for '@nx/js/typescript:createDependencies' 3.164542019367218ms
+[NX Daemon Server] - 2024-11-11T00:09:59.078Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:09:59.078Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:09:59.078Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:09:59.078Z - Time taken for 'total execution time for createProjectGraph()' 7.422333002090454ms
+[NX Daemon Server] - 2024-11-11T00:09:59.315Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-11-11T00:09:59.315Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-11-11T00:09:59.315Z - Handled RECORD_OUTPUTS_HASH. Handling time: 7. Response time: 0.
+[NX Daemon Server] - 2024-11-11T00:09:59.376Z - [REQUEST]: Responding to the client. PROCESS_IN_BACKGROUND
+[NX Daemon Server] - 2024-11-11T00:09:59.376Z - Done responding to the client PROCESS_IN_BACKGROUND
+[NX Daemon Server] - 2024-11-11T00:09:59.376Z - Handled PROCESS_IN_BACKGROUND. Handling time: 20. Response time: 0.
+[NX Daemon Server] - 2024-11-11T00:09:59.377Z - Uploading file artifacts
+[NX Daemon Server] - 2024-11-11T00:09:59.383Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-11-11T00:09:59.582Z - Done uploading file artifacts
+[NX Daemon Server] - 2024-11-11T00:09:59.582Z - Sending EndRun request
+[NX Daemon Server] - 2024-11-11T00:09:59.753Z - Done sending EndRun request
+[NX Daemon Server] - 2024-11-11T00:10:05.188Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-11T00:10:05.189Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-11-11T00:10:05.189Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-11T00:10:05.190Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-11-11T00:10:05.191Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-11-11T00:10:05.191Z - Time taken for 'total for creating and serializing project graph' 0.3463340401649475ms
+[NX Daemon Server] - 2024-11-11T00:10:05.192Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-11-11T00:10:05.192Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 1.
+[NX Daemon Server] - 2024-11-11T00:10:05.225Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-11-11T00:10:05.225Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-11-11T00:10:05.225Z - Handled HASH_TASKS. Handling time: 2. Response time: 0.
+[NX Daemon Server] - 2024-11-11T00:10:05.301Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2024-11-11T00:10:05.301Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2024-11-11T00:10:05.301Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-11-11T00:10:06.938Z - [WATCHER]: 0 file(s) created or restored, 3 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:10:06.938Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:10:07.040Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:10:07.040Z - [REQUEST]: apps/authorization-service/.gradle/buildOutputCleanup/buildOutputCleanup.lock,apps/authorization-service/.gradle/8.10.2/checksums/checksums.lock,apps/authorization-service/.gradle/8.10.2/fileHashes/fileHashes.lock
+[NX Daemon Server] - 2024-11-11T00:10:07.040Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:10:07.041Z - Time taken for 'hash changed files from watcher' 0.34679198265075684ms
+[NX Daemon Server] - 2024-11-11T00:10:07.046Z - Time taken for 'build-project-configs' 4.233375012874603ms
+[NX Daemon Server] - 2024-11-11T00:10:07.051Z - Time taken for '@nx/js/typescript:createDependencies' 5.106957972049713ms
+[NX Daemon Server] - 2024-11-11T00:10:07.059Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:10:07.060Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:10:07.060Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:10:07.060Z - Time taken for 'total execution time for createProjectGraph()' 12.634333968162537ms
+[NX Daemon Server] - 2024-11-11T00:10:11.085Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:10:11.315Z - [WATCHER]: 0 file(s) created or restored, 7 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:10:11.315Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:10:11.363Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-11-11T00:10:11.363Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-11-11T00:10:11.363Z - Handled RECORD_OUTPUTS_HASH. Handling time: 5. Response time: 0.
+[NX Daemon Server] - 2024-11-11T00:10:11.403Z - [REQUEST]: Responding to the client. PROCESS_IN_BACKGROUND
+[NX Daemon Server] - 2024-11-11T00:10:11.403Z - Done responding to the client PROCESS_IN_BACKGROUND
+[NX Daemon Server] - 2024-11-11T00:10:11.403Z - Handled PROCESS_IN_BACKGROUND. Handling time: 15. Response time: 0.
+[NX Daemon Server] - 2024-11-11T00:10:11.404Z - Uploading file artifacts
+[NX Daemon Server] - 2024-11-11T00:10:11.408Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-11-11T00:10:11.516Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:10:11.516Z - [REQUEST]: apps/authorization-service/.gradle/8.10.2/checksums/checksums.lock,apps/authorization-service/.gradle/8.10.2/fileHashes/fileHashes.bin,apps/authorization-service/.gradle/8.10.2/fileHashes/fileHashes.lock,apps/authorization-service/.gradle/buildOutputCleanup/outputFiles.bin,apps/authorization-service/.gradle/8.10.2/executionHistory/executionHistory.lock,apps/authorization-service/.gradle/buildOutputCleanup/buildOutputCleanup.lock,apps/authorization-service/.gradle/8.10.2/fileChanges/last-build.bin
+[NX Daemon Server] - 2024-11-11T00:10:11.516Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:10:11.517Z - Time taken for 'hash changed files from watcher' 0.3677080273628235ms
+[NX Daemon Server] - 2024-11-11T00:10:11.522Z - Time taken for 'build-project-configs' 4.47808301448822ms
+[NX Daemon Server] - 2024-11-11T00:10:11.524Z - Time taken for '@nx/js/typescript:createDependencies' 2.1196670532226562ms
+[NX Daemon Server] - 2024-11-11T00:10:11.528Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:10:11.528Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:10:11.528Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:10:11.528Z - Time taken for 'total execution time for createProjectGraph()' 4.995833039283752ms
+[NX Daemon Server] - 2024-11-11T00:10:11.604Z - Done uploading file artifacts
+[NX Daemon Server] - 2024-11-11T00:10:11.604Z - Sending EndRun request
+[NX Daemon Server] - 2024-11-11T00:10:11.752Z - Done sending EndRun request
+[NX Daemon Server] - 2024-11-11T00:10:13.371Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-11T00:10:13.372Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-11-11T00:10:13.372Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-11T00:10:13.373Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-11-11T00:10:13.373Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-11-11T00:10:13.374Z - Time taken for 'total for creating and serializing project graph' 0.1552499532699585ms
+[NX Daemon Server] - 2024-11-11T00:10:13.375Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-11-11T00:10:13.375Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX Daemon Server] - 2024-11-11T00:10:13.403Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-11-11T00:10:13.403Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-11-11T00:10:13.403Z - Handled HASH_TASKS. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-11-11T00:10:13.478Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2024-11-11T00:10:13.478Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2024-11-11T00:10:13.478Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-11-11T00:10:14.960Z - [WATCHER]: 0 file(s) created or restored, 3 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:10:14.961Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:10:15.062Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:10:15.062Z - [REQUEST]: apps/authorization-service/.gradle/8.10.2/checksums/checksums.lock,apps/authorization-service/.gradle/8.10.2/fileHashes/fileHashes.lock,apps/authorization-service/.gradle/buildOutputCleanup/buildOutputCleanup.lock
+[NX Daemon Server] - 2024-11-11T00:10:15.062Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:10:15.064Z - Time taken for 'hash changed files from watcher' 0.4090830087661743ms
+[NX Daemon Server] - 2024-11-11T00:10:15.069Z - Time taken for 'build-project-configs' 4.647125005722046ms
+[NX Daemon Server] - 2024-11-11T00:10:15.071Z - Time taken for '@nx/js/typescript:createDependencies' 2.1231250166893005ms
+[NX Daemon Server] - 2024-11-11T00:10:15.076Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:10:15.076Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:10:15.076Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:10:15.077Z - Time taken for 'total execution time for createProjectGraph()' 5.9531660079956055ms
+[NX Daemon Server] - 2024-11-11T00:10:18.912Z - [WATCHER]: apps/authorization-service/.gradle/8.10.2/executionHistory/executionHistory.lock was modified
+[NX Daemon Server] - 2024-11-11T00:10:18.913Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:10:19.121Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:10:19.121Z - [REQUEST]: apps/authorization-service/.gradle/8.10.2/executionHistory/executionHistory.lock
+[NX Daemon Server] - 2024-11-11T00:10:19.121Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:10:19.130Z - Time taken for 'hash changed files from watcher' 3.47604101896286ms
+[NX Daemon Server] - 2024-11-11T00:10:19.139Z - Time taken for 'build-project-configs' 12.049125015735626ms
+[NX Daemon Server] - 2024-11-11T00:10:19.141Z - Time taken for '@nx/js/typescript:createDependencies' 3.4004589915275574ms
+[NX Daemon Server] - 2024-11-11T00:10:19.148Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:10:19.148Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:10:19.148Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:10:19.148Z - Time taken for 'total execution time for createProjectGraph()' 9.136540949344635ms
+[NX Daemon Server] - 2024-11-11T00:10:20.159Z - [WATCHER]: 0 file(s) created or restored, 6 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-11T00:10:20.159Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:10:20.561Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:10:20.561Z - [REQUEST]: apps/authorization-service/.gradle/8.10.2/fileChanges/last-build.bin,apps/authorization-service/.gradle/8.10.2/fileHashes/fileHashes.lock,apps/authorization-service/.gradle/8.10.2/checksums/checksums.lock,apps/authorization-service/.gradle/buildOutputCleanup/outputFiles.bin,apps/authorization-service/.gradle/buildOutputCleanup/buildOutputCleanup.lock,apps/authorization-service/.gradle/8.10.2/executionHistory/executionHistory.lock
+[NX Daemon Server] - 2024-11-11T00:10:20.561Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:10:20.565Z - Time taken for 'hash changed files from watcher' 0.599291980266571ms
+[NX Daemon Server] - 2024-11-11T00:10:20.570Z - Time taken for 'build-project-configs' 5.006666958332062ms
+[NX Daemon Server] - 2024-11-11T00:10:20.572Z - Time taken for '@nx/js/typescript:createDependencies' 2.5208340287208557ms
+[NX Daemon Server] - 2024-11-11T00:10:20.579Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:10:20.580Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:10:20.580Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:10:20.580Z - Time taken for 'total execution time for createProjectGraph()' 9.08933299779892ms
+[NX Daemon Server] - 2024-11-11T00:10:20.599Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-11-11T00:10:20.599Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-11-11T00:10:20.599Z - Handled RECORD_OUTPUTS_HASH. Handling time: 6. Response time: 0.
+[NX Daemon Server] - 2024-11-11T00:10:20.650Z - [REQUEST]: Responding to the client. PROCESS_IN_BACKGROUND
+[NX Daemon Server] - 2024-11-11T00:10:20.650Z - Done responding to the client PROCESS_IN_BACKGROUND
+[NX Daemon Server] - 2024-11-11T00:10:20.650Z - Handled PROCESS_IN_BACKGROUND. Handling time: 19. Response time: 0.
+[NX Daemon Server] - 2024-11-11T00:10:20.651Z - Uploading file artifacts
+[NX Daemon Server] - 2024-11-11T00:10:20.662Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-11-11T00:10:20.855Z - Done uploading file artifacts
+[NX Daemon Server] - 2024-11-11T00:10:20.855Z - Sending EndRun request
+[NX Daemon Server] - 2024-11-11T00:10:21.013Z - Done sending EndRun request
+[NX Daemon Server] - 2024-11-11T00:11:01.621Z - [WATCHER]: apps/authorization-service/.git was deleted
+[NX Daemon Server] - 2024-11-11T00:11:01.623Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:11:02.429Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:11:02.429Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:11:02.429Z - [REQUEST]: apps/authorization-service/.git
+[NX Daemon Server] - 2024-11-11T00:11:02.443Z - Time taken for 'hash changed files from watcher' 2.5025829672813416ms
+[NX Daemon Server] - 2024-11-11T00:11:02.471Z - Time taken for 'build-project-configs' 24.39758402109146ms
+[NX Daemon Server] - 2024-11-11T00:11:02.473Z - Time taken for '@nx/js/typescript:createDependencies' 5.3071669936180115ms
+[NX Daemon Server] - 2024-11-11T00:11:02.479Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:11:02.479Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:11:02.479Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:11:02.479Z - Time taken for 'total execution time for createProjectGraph()' 14.321042001247406ms
+[NX Daemon Server] - 2024-11-11T00:18:21.050Z - [WATCHER]: .github/workflows/ci.yml was deleted
+[NX Daemon Server] - 2024-11-11T00:18:21.057Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:18:22.663Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:18:22.663Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:18:22.663Z - [REQUEST]: .github/workflows/ci.yml
+[NX Daemon Server] - 2024-11-11T00:18:22.672Z - Time taken for 'hash changed files from watcher' 2.732457995414734ms
+[NX Daemon Server] - 2024-11-11T00:18:22.722Z - Time taken for 'build-project-configs' 43.394917011260986ms
+[NX Daemon Server] - 2024-11-11T00:18:22.729Z - Time taken for '@nx/js/typescript:createDependencies' 10.094624996185303ms
+[NX Daemon Server] - 2024-11-11T00:18:22.736Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:18:22.737Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-11T00:18:22.737Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-11T00:18:22.737Z - Time taken for 'total execution time for createProjectGraph()' 21.003167033195496ms
+[NX Daemon Server] - 2024-11-11T00:18:26.994Z - [WATCHER]: .gitignore was deleted
+[NX Daemon Server] - 2024-11-11T00:18:26.994Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:18:26.995Z - [WATCHER]: Stopping the watcher for /Users/gaborfekete/home_projects/nx/authorization-service (sources)
+[NX Daemon Server] - 2024-11-11T00:18:26.995Z - [WATCHER]: Stopping the watcher for /Users/gaborfekete/home_projects/nx/authorization-service (outputs)
+[NX Daemon Server] - 2024-11-11T00:18:27.000Z - Server stopped because: "Stopping the daemon the set of ignored files changed (native)"
