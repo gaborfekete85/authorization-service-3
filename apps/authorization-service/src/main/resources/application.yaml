@@ -41,7 +41,10 @@ spring:
             clientId: ${GOOGLE_CLIENT_ID:912050282042-ais7fbu2uns1u3go9eoe6l8iaiv3iruo.apps.googleusercontent.com}
             clientSecret: ${GOOGLE_CLIENT_SECRET:5Ex-92yP7Q1YU_TmgtVXiYR5}
             redirectUri: "${BASE_URL:http://localhost:8300}/oauth2/callback/{registrationId}" # Registered in facebook developer portal: https://cloudbookings.com/oauth2/callback
+            authorization-grant-type: authorization_code
+            client-name: Google
             scope:
+              - openid
               - email
               - profile
           facebook:
@@ -59,6 +62,11 @@ spring:
               - user:email
               - read:user
         provider:
+          google:
+            authorization-uri: https://accounts.google.com/o/oauth2/auth
+            token-uri: https://oauth2.googleapis.com/token
+            user-info-uri: https://www.googleapis.com/oauth2/v3/userinfo
+            user-name-attribute: sub
           facebook:
             authorizationUri: https://www.facebook.com/v12.0/dialog/oauth
             tokenUri: https://graph.facebook.com/v12.0/oauth/access_token
@@ -76,7 +84,7 @@ app:
   smtp:
     userName: gabor.fekete85@gmail.com
     password: ${SMTP_PASSWORD:5abmCGkcwUryvWKD}
-  publicEndpoint: ${BASE_URL:http://localhost:8300}
+  publicEndpoint: ${BASE_URL:http://localhost:8302}
   auth:
     tokenSecret: 984050a14efc4eae2555729d6eaf0f78329bdf2eed1dc81219df675ede353f6e05b2ecf6335e0bacbabf21e4ac245663634cf1270
     tokenExpirationMsec: 86400000 # 1 day
@@ -96,6 +104,8 @@ app:
       - https://rewura.gleeze.com/oauth2/redirect
       - https://ford.local/oauth2/redirect
       - https://rewura.com/oauth2/redirect
+      - https://dev.rewura.com/oauth2/redirect
+      - https://dev2.rewura.com/oauth2/redirect
       - http://localhost/oauth2/redirect
       - http://localhost:8300/oauth2/redirect
       - http://localhost:8400/oauth2/redirect
@@ -106,3 +116,9 @@ app:
       - exp://172.20.10.3:19002/oauth2/redirect
       - exp://wg-qka.notbrent.app.exp.direct
 
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.security.oauth2: DEBUG
+    org.springframework.security.oauth2.client: DEBUG
+    org.springframework.security.oauth2.core: DEBUG

@@ -2,6 +2,7 @@ package com.infra.authorization.services.security.oauth2;
 
 import com.infra.authorization.exception.OAuth2AuthenticationProcessingException;
 import com.infra.authorization.model.AuthProvider;
+import com.infra.authorization.model.UserDetail;
 import com.infra.authorization.persistence.entities.ERole;
 import com.infra.authorization.persistence.entities.User;
 import com.infra.authorization.persistence.repository.RoleRepository;
@@ -63,8 +64,7 @@ public class CustomOIDCOAuth2UserService extends OidcUserService {
         } else {
             user = registerNewUser(oAuth2UserRequest, oAuth2UserInfo);
         }
-
-        return null;
+        return UserDetail.of(user);
     }
 
     private User registerNewUser(OAuth2UserRequest oAuth2UserRequest, OAuth2UserInfo oAuth2UserInfo) {

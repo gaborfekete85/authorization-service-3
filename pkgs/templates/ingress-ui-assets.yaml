@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: "{{ .Values.ingress.frontend_assets.fullName }}"
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /assets/$1$2
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+  - host: {{ .Values.application.host }}
+    http:
+      paths:
+        - path: /assets(/|$)(.*)
+          pathType: ImplementationSpecific
+          backend:
+            service: 
+              name: rewura-frontend-service
+              port: 
+                number: 8301
