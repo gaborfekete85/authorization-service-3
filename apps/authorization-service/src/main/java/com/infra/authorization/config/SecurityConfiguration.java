@@ -10,6 +10,7 @@ import com.infra.authorization.services.security.oauth2.HttpCookieOAuth2Authoriz
 import com.infra.authorization.services.security.oauth2.OAuth2AuthenticationFailureHandler;
 import com.infra.authorization.services.security.oauth2.OAuth2AuthenticationSuccessHandler;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
@@ -28,6 +29,7 @@ import org.springframework.security.config.oauth2.client.CommonOAuth2Provider;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.client.oidc.userinfo.OidcUserService;
 import org.springframework.security.oauth2.client.registration.ClientRegistration;
 import org.springframework.security.oauth2.client.registration.ClientRegistrationRepository;
 import org.springframework.security.oauth2.client.registration.InMemoryClientRegistrationRepository;
@@ -44,10 +46,15 @@ import java.util.stream.Collectors;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfiguration {
     private static String CLIENT_PROPERTY_KEY = "spring.security.oauth2.client.registration.";
+
+    @Value("${app.publicEndpoint}")
+    private String baseUrl;
+
     private static final List<String> clients = List.of(AuthProvider.google.name().toLowerCase(), AuthProvider.facebook.name().toLowerCase());
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
     private final UserDetailsService userDetailsService;
     private final CustomOAuth2UserService customOAuth2UserService;
+    private final OidcUserService CustomOIDCOAuth2UserService;
     private final OAuth2AuthenticationSuccessHandler oAuth2AuthenticationSuccessHandler;
     private final OAuth2AuthenticationFailureHandler oAuth2AuthenticationFailureHandler;
     private final Environment environment;
@@ -78,7 +85,9 @@ public class SecurityConfiguration {
                 .oauth2Login(oauth -> {
                     oauth.authorizationEndpoint(ep -> ep.baseUri("/oauth2/authorize").authorizationRequestRepository(cookieAuthorizationRequestRepository()))
                             .redirectionEndpoint(r -> r.baseUri("/oauth2/callback/*"))
-                            .userInfoEndpoint(e -> e.userService(customOAuth2UserService))
+                            .userInfoEndpoint(e -> e
+                                    .oidcUserService(CustomOIDCOAuth2UserService)
+                                    .userService(customOAuth2UserService))
                             .successHandler(oAuth2AuthenticationSuccessHandler)
                             .failureHandler(oAuth2AuthenticationFailureHandler);
                         }
@@ -92,6 +101,7 @@ public class SecurityConfiguration {
         return http.build();
     }
 
+    @Bean
     public CustomSavedRequestFilter customSavedRequestFilter() { return new CustomSavedRequestFilter(); }
     @Bean
     public HttpCookieOAuth2AuthorizationRequestRepository cookieAuthorizationRequestRepository() {
@@ -137,7 +147,7 @@ public class SecurityConfiguration {
             return CommonOAuth2Provider.GOOGLE.getBuilder(client)
                     .clientId(clientId)
                     .clientSecret(clientSecret)
-                    .redirectUri("http://localhost:8300/oauth2/callback/{registrationId}")
+                    .redirectUri(baseUrl + "/oauth2/callback/{registrationId}")
                     .build();
         }
 
@@ -145,7 +155,7 @@ public class SecurityConfiguration {
             return CommonOAuth2Provider.FACEBOOK.getBuilder(client)
                     .clientId(clientId)
                     .clientSecret(clientSecret)
-                    .redirectUri("https://localhost:8300/oauth2/callback/{registrationId}")
+                    .redirectUri(baseUrl + "/oauth2/callback/{registrationId}")
                     .build();
         }
         return null;

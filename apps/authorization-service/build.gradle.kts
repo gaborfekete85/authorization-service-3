@@ -81,7 +81,7 @@ jib {
 	}
 	to {
 		image = "${findProperty("DOCKER_REPOSITORY")}/authorization-service-3"
-		tags = setOf(getGitHash())
+		tags = setOf(generateRandomString(7))
 		auth {
 			username = findProperty("DOCKER_USERNAME") as String?
 			password = findProperty("DOCKER_PASSWORD") as String?

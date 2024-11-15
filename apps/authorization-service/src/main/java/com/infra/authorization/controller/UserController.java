@@ -50,10 +50,13 @@ public class UserController {
         return user;
     }
 
-    @GetMapping("/check-token")
-    @PreAuthorize("hasRole('USER')")
+    @GetMapping({"/check_token", "/check-token"})
+//    @PreAuthorize("hasRole('USER')")
     public User checkToken(@Autowired Authentication authentication) {
-        return this.getCurrentUser(authentication);
+        UserDetail userPrincipal = (UserDetail) authentication.getPrincipal();
+        User user = userRepository.findByEmail(userPrincipal.getUsername())
+                .orElseThrow(() -> new UsernameNotFoundException("User not found: " + userPrincipal.getUsername()));
+        return user;
     }
 
     @GetMapping("/user/{userId}")

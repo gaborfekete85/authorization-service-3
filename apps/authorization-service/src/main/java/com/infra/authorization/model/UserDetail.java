@@ -5,6 +5,9 @@ import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.oauth2.core.oidc.OidcIdToken;
+import org.springframework.security.oauth2.core.oidc.OidcUserInfo;
+import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 
 import java.util.Collection;
@@ -13,7 +16,7 @@ import java.util.Map;
 import java.util.Objects;
 
 @Data
-public class UserDetail implements UserDetails, OAuth2User {
+public class UserDetail implements UserDetails, OAuth2User, OidcUser {
 
     private final User user;
     private final Map<String, Object> attributes;
@@ -83,5 +86,20 @@ public class UserDetail implements UserDetails, OAuth2User {
     @Override
     public String getName() {
         return user.getName();
+    }
+
+    @Override
+    public Map<String, Object> getClaims() {
+        return getAttributes();
+    }
+
+    @Override
+    public OidcUserInfo getUserInfo() {
+        return new OidcUserInfo(getAttributes());
+    }
+
+    @Override
+    public OidcIdToken getIdToken() {
+        return null;
     }
 }

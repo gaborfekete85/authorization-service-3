@@ -1,0 +1,34 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: "{{ .Values.ingress.oauth2.fullName }}"
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /oauth2/$1$2
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+spec:
+  rules:
+  - host: {{ .Values.application.host }}
+    http:
+      paths:
+        - path: /oauth2/(redirect|$)(.*)
+          pathType: ImplementationSpecific        
+          backend:
+            service: 
+              name: rewura-frontend-service
+              port: 
+                number: 8301
+        - path: /oauth2/(authorize|$)(.*)
+          pathType: ImplementationSpecific        
+          backend:
+            service: 
+              name: rewura-authorization-service
+              port: 
+                number: 8302
+        - path: /oauth2/(callback|$)(.*)
+          pathType: ImplementationSpecific        
+          backend:
+            service: 
+              name: rewura-authorization-service
+              port: 
+                number: 8302

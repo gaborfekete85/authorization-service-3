@@ -527,3 +527,42 @@
 [NX Daemon Server] - 2024-11-11T00:18:26.995Z - [WATCHER]: Stopping the watcher for /Users/gaborfekete/home_projects/nx/authorization-service (sources)
 [NX Daemon Server] - 2024-11-11T00:18:26.995Z - [WATCHER]: Stopping the watcher for /Users/gaborfekete/home_projects/nx/authorization-service (outputs)
 [NX Daemon Server] - 2024-11-11T00:18:27.000Z - Server stopped because: "Stopping the daemon the set of ignored files changed (native)"
+[NX Daemon Server] - 2024-11-11T00:29:43.348Z - Started listening on: /var/folders/jg/9kr58cnd34q4gwx2sf7gttn00000gn/T/a0ba9a3369aec1cfde0e/d.sock
+[NX Daemon Server] - 2024-11-11T00:29:43.351Z - [WATCHER]: Subscribed to changes within: /Users/gaborfekete/home_projects/nx/authorization-service (native)
+[NX Daemon Server] - 2024-11-11T00:29:43.356Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-11T00:29:43.357Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-11-11T00:29:43.358Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-11T00:29:43.360Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-11-11T00:29:43.411Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:29:43.507Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-11T00:29:43.508Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:29:43.508Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-11T00:29:43.513Z - Time taken for 'loadNxPlugins' 145.67766600847244ms
+[NX Daemon Server] - 2024-11-11T00:29:43.525Z - Time taken for 'build-project-configs' 7.223083019256592ms
+[NX Daemon Server] - 2024-11-11T00:29:43.527Z - Time taken for '@nx/js/typescript:createDependencies' 1.6029160022735596ms
+[NX Daemon Server] - 2024-11-11T00:29:43.532Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-11T00:29:43.532Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-11-11T00:29:43.532Z - Time taken for 'total for creating and serializing project graph' 171.98695796728134ms
+[NX Daemon Server] - 2024-11-11T00:29:43.533Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-11-11T00:29:43.533Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 172. Response time: 1.
+[NX Daemon Server] - 2024-11-11T00:29:43.587Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-11-11T00:29:43.588Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-11-11T00:29:43.588Z - Handled HASH_TASKS. Handling time: 4. Response time: 1.
+[NX Daemon Server] - 2024-11-11T00:29:43.692Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2024-11-11T00:29:43.692Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2024-11-11T00:29:43.692Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 13. Response time: 0.
+[NX Daemon Server] - 2024-11-11T00:29:51.874Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-11T00:29:52.315Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-11-11T00:29:52.315Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-11-11T00:29:52.315Z - Handled RECORD_OUTPUTS_HASH. Handling time: 6. Response time: 0.
+[NX Daemon Server] - 2024-11-11T00:29:52.478Z - [REQUEST]: Responding to the client. PROCESS_IN_BACKGROUND
+[NX Daemon Server] - 2024-11-11T00:29:52.478Z - Done responding to the client PROCESS_IN_BACKGROUND
+[NX Daemon Server] - 2024-11-11T00:29:52.478Z - Handled PROCESS_IN_BACKGROUND. Handling time: 84. Response time: 0.
+[NX Daemon Server] - 2024-11-11T00:29:52.478Z - Uploading file artifacts
+[NX Daemon Server] - 2024-11-11T00:29:52.505Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-11-11T00:29:52.718Z - Done uploading file artifacts
+[NX Daemon Server] - 2024-11-11T00:29:52.719Z - Sending EndRun request
+[NX Daemon Server] - 2024-11-11T00:29:52.857Z - Done sending EndRun request
+[NX Daemon Server] - 2024-11-11T04:50:24.406Z - [WATCHER]: Stopping the watcher for /Users/gaborfekete/home_projects/nx/authorization-service (sources)
+[NX Daemon Server] - 2024-11-11T04:50:24.416Z - [WATCHER]: Stopping the watcher for /Users/gaborfekete/home_projects/nx/authorization-service (outputs)
+[NX Daemon Server] - 2024-11-11T04:50:24.432Z - Server stopped because: "10800000ms of inactivity"

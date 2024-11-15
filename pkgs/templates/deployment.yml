@@ -1,0 +1,44 @@
+{{ $top := . }}
+{{- range $index, $item := .Values.service }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ $item.serviceName }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: {{ $item.componentSelector }}
+  template:
+    metadata:
+      labels:
+        component: {{ $item.componentSelector }}
+    spec:
+      containers:
+        - name: {{ $item.serviceName }}
+          image: "{{ $item.image }}"
+          ports:
+            - containerPort: {{ $item.port }}
+          env:
+            {{- range $index, $env := $item.environment }}
+            - name: {{ $env.name }}
+              value: '{{ $env.value }}'
+            {{- end }}
+            - name: ZIPKIN_BASE_URL
+              value: "http://zipkin-collector:9411"
+            - name: BASE_URL
+              value: "https://{{ $.Values.application.host }}"
+            #- name: PGPASSWORD
+            #  valueFrom:
+            #    secretKeyRef:
+            #      name: pgpassword
+            #      key: PGPASSWORD
+          volumeMounts:
+            - name: firebase
+              mountPath: "/opt/firebase"
+      volumes:
+        - name: firebase
+          secret:
+            secretName: {{ $top.Release.Name }}-firebase
+{{- end }}

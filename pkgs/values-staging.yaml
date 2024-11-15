@@ -1,0 +1,51 @@
+application: 
+  host: ford.gleeze.com
+env: staging
+
+ingress: 
+  api: 
+    fullName: nginx-ingress-api-staging
+  oauth2: 
+    fullName: nginx-ingress-oauth2-staging
+  frontend: 
+    fullName: nginx-ingress-frontend-staging
+  frontend_oauth: 
+    fullName: nginx-ingress-frontend-oauth-staging
+
+service:
+  frontend: 
+    serviceName: frontend-service
+    port: 8301
+    portType: ClusterIP
+    image: gabendockerzone/frontend:fdc5ff9
+    componentSelector: web
+  postgres: 
+    serviceName: postgres-service
+    port: 5432
+    portType: NodePort
+    image: postgres
+    componentSelector: postgres
+  authorization: 
+    serviceName: authorization-service
+    port: 8302
+    portType: ClusterIP
+    image: gabendockerzone/authorization-service:e41e2293
+    componentSelector: server
+  file: 
+    serviceName: file-upload-service
+    port: 8303
+    portType: ClusterIP
+    image: gabendockerzone/file-upload-service:20aad91
+    componentSelector: server-inquiry
+  inquiry: 
+    serviceName: inquiry-service
+    port: 8304
+    portType: ClusterIP
+    image: gabendockerzone/inquiry-service:fdc5ff9
+    componentSelector: server-inquiry
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80

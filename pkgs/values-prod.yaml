@@ -1,0 +1,109 @@
+application: 
+  host: rewura.com
+env: prod
+
+ingress: 
+  api: 
+    fullName: nginx-ingress-api-dev
+  oauth2: 
+    fullName: nginx-ingress-oauth2-dev
+  frontend: 
+    fullName: nginx-ingress-frontend-dev
+  frontend_oauth: 
+    fullName: nginx-ingress-frontend-oauth-dev
+
+service:
+  frontend: 
+    serviceName: rewura-frontend-service
+    port: 8301
+    portType: ClusterIP
+    image: gabendockerzone/rewura-frontend:e6be2ac
+    componentSelector: web
+  authorization: 
+    serviceName: rewura-authorization-service
+    port: 8302
+    portType: ClusterIP
+    image: gabendockerzone/authorization-service:e41e229
+    componentSelector: server
+    environment: 
+      - name: 'DATASOURCE_URL'
+        value: 'jdbc:postgresql://postgres-postgresql.managed/postgres?currentSchema=prod_rewura_auth,public,pg_catalog'
+      - name: 'DATASOURCE_USER'
+        value: 'postgres'
+      - name: 'DATASOURCE_PASSWORD'
+        value: 'postgres'
+      - name: GOOGLE_CLIENT_ID
+        value: '912050282042-ais7fbu2uns1u3go9eoe6l8iaiv3iruo.apps.googleusercontent.com'
+      - name: GOOGLE_CLIENT_SECRET
+        value: '5Ex-92yP7Q1YU_TmgtVXiYR5'
+      - name: FACEBOOK_CLIENT_ID
+        value: '1670650839666976'
+      - name: FACEBOOK_CLIENT_SECRET
+        value: '97e1e2cfb217a1730563ad1361bda51c'
+  file: 
+    serviceName: rewura-file-upload-service
+    port: 8303
+    portType: ClusterIP
+    image: gabendockerzone/file-upload-service:c8b93a9
+    componentSelector: server-file
+    environment: 
+      - name: 'FIREBASE_API_KEY'
+        value: 'AIzaSyDzeF_A10cn-DcRxI0AWG0J3DB5NUHeJ4E'
+      - name: 'FIREBASE_PROJECT_ID'
+        value: 'pppp-59919'
+      - name: 'FIREBASE_AUTH_DOMAIN'
+        value: 'pppp-59919.firebaseapp.com'
+      - name: 'FIREBASE_DB_URL'
+        value: 'https://pppp-59919.firebaseio.com'
+      - name: 'FIREBASE_STORAGE_BUCKET'
+        value: 'gs://pppp-59919.appspot.com'
+      - name: 'FIREBASE_MSG_SENDER_ID'
+        value: '912050282042'
+      - name: 'FIREBASE_APP_ID'
+        value: '1:912050282042:android:371b110d2d4cd643249f03'    
+      - name: 'FIREBASE_ACC_TYPE'
+        value: 'service_account'
+      - name: 'FIREBASE_ACC_PK_ID'
+        value: 'd5e560d572feaaf52a9ab932ae6d68088ebf225a'
+      - name: 'FIREBASE_ACC_PK'
+        value: '-----BEGIN PRIVATE KEY-----MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCvFZ2F6seEgXF56G2dtyaQeN+4mUFhtPBVy1SaRwXtHK/LOlvK39AlyoHMGTxpIVMw/PJzA+ccEtyg/io7bBckP7RNQLNNC2GUZ0iMZbVQbG1M5d5j9NpOl6Ca4XUbC9UBhxmvzX3L3lmZJz6Vgz/njthR8vVDn9uO1iX1XaaksMirPUoxEvq2eLqKseFZtWv+GszcmBmbQyL3Q3E/qRHH9NAm7OCaH2e63484Ywfx38sttvxmtEU3aBDfbrrIKMyRbtRQSF/A7OQ9zQKr5zBQV2mSP4622AEkow7gVmQjbdU3rYvCUnc5PYKQ3ZIrJFqnia3C6vAzYZ0m4Aao1iIFAgMBAAECggEAHgOX1yz2CoRRMmuSnQKYcRRTj9bv4yLMP3zlkjQCM1FjXnSw5zCig1P5l8Ysub39f6yhGG/vFrwyB8RCc6DWP7/O9h5VDmxYzEK/aFgIMtL/krrmOp7vLKFoJhznwRzwZTxmfiF9Qu1pUSyt2R4gnp65fSToADF/hzc1VyB4kIs3yo+V23Qh4FsqGYvpqu7QxsoyqX+ohx6PX7i7GR2RynI7T9sXeA564KKuplsGt5BKaTVpGsuqEzeetXkbgtORBBQSR5o8J4G1gVKTvVAQk6HFyeZ8iIEqCJHYgQczcYO3R3bTaQfOJOeNf9a7cQTo0lFSsziY2084nKgi6Bn+OQKBgQDqK0pA59MGwTh/+SDnQQ/JqFGNaGO3ezcacrNklfWZ1KeUmfU+X9kQzRQqPJ31jd01dygx0Q3T9dChHW1qGkBsiTWeRkEdn2J5CxM1efW31a4HaCoJi1JGOGL5LI4W10IWWO2K/SCNiGwCSrqJAQcuS8RSENxqXTvzB8qB817ieQKBgQC/aDP31iZoVCH5n1icGxAQmKdNiA5Cz26oqnoZTS222h3QWBlps9X+FPf/hTDbExQC5mtIbe1hKn44Jq4JaRi50Z0gjxnRVpuVFajo4J91gy54MHJUtYqDs0UXJXn2ee2Zqsnw1Z58fNInFai8DKkBg8lMwg0+t2mB3E1/XxQ47QKBgQDAhXDZ5f7ISelixXb4ybPqLnlGEjIRcrr+AplctDGlFIHmmaFYc8LpnkHa69VOQiFBSMMCGgcNYcbx/1iqaATZdwFfLBFzAkwaijFzwN51EreunUQabrHoy4kLpUb4nmdWKiy6HZw64JM0Wy37X54AwQgaFISy6g5Uo+4pYuZ6uQKBgQCuSVkAtAvW9bzWCoVp566SHh5BF8E8jpsJk+mH/mHA3Q1Gt+G0AR+6syc6kPHymYWgOmW31vjOgB3cTUQtp3fvQ3HawtLUbhNPBiD+pAIuw5tdr2d7wK52y5b+w44xo8Z5JS2qUSl120aUdkFlsfV2PqTectgSonm82HfsogvM5QKBgQDP1S1j+S9pFyi+al4LQlQUXTbOZ5MWa5GYlv4ENdiTzPTJ+y/VNTzm93yHHkc8J9Mj4X8CpM3eBRGYDNODTJL7SZ3oefLSt3P0N8x0aXLwGStZVN6E2MUh2hUvy5JWPJGS1XMQ7GDtMqWm56nc6HCA+vbMJ6qoZKFs/7oijAGzcw==-----END PRIVATE KEY-----'
+      - name: 'FIREBASE_ACC_CLIENT_EMAIL'
+        value: 'firebase-adminsdk-z1ftu@pppp-59919.iam.gserviceaccount.com'
+      - name: 'FIREBASE_ACC_CLIENT_ID'
+        value: '107824171384433006623'
+      - name: 'FIREBASE_ACC_AUTH_URI'
+        value: 'https://accounts.google.com/o/oauth2/auth'
+      - name: 'FIREBASE_ACC_TOKEN_URI'
+        value: 'https://oauth2.googleapis.com/token'
+      - name: 'FIREBASE_ACC_AUTH_CERT_URL'
+        value: 'https://www.googleapis.com/oauth2/v1/certs'
+      - name: 'FIREBASE_ACC_CLIENT_CERT_URL'
+        value: 'https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-z1ftu%40pppp-59919.iam.gserviceaccount.com'
+  hobby: 
+    serviceName: rewura-hobby-service
+    port: 8304
+    portType: ClusterIP
+    image: gabendockerzone/hobby-service:b35f572
+    componentSelector: server-hobby
+    environment: 
+      - name: 'DATASOURCE_URL'
+        value: 'jdbc:postgresql://postgres-postgresql.managed/postgres?currentSchema=prod_rewura,public,pg_catalog'
+      - name: 'DATASOURCE_USER'
+        value: 'postgres'
+      - name: 'DATASOURCE_PASSWORD'
+        value: 'postgres'
+      - name: AUTH_SERVICE_ENDPOINT
+        value: 'http://rewura-authorization-service:8302/api/auth'
+
+  #postgres: 
+  #  serviceName: postgres-service
+  #  port: 5432
+  #  portType: NodePort
+  #  image: postgres
+  #  componentSelector: postgres
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80

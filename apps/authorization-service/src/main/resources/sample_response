@@ -1,0 +1,18 @@
+{
+    "id": "4182ed2b-0903-426b-80a6-7373c297aa3a",
+    "name": "Gábor Fekete",
+    "email": "gabor.fekete85@gmail.com",
+    "imageUrl": "https://lh3.googleusercontent.com/a/ACg8ocL1O9k1Q19qMvWembwdK9lxPvSRZTg8GEKslBYGuFuSFOV0Og=s96-c",
+    "emailVerified": false,
+    "emailVerificationCode": null,
+    "provider": "google",
+    "roles": [
+        {
+            "name": "ROLE_USER",
+            "id": 3
+        }
+    ],
+    "phone": null,
+    "registrationDateTime": null,
+    "providerId": "108701920434068363712"
+}
