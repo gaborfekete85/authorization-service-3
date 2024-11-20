@@ -19,12 +19,88 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".gitignore",
-        "hash": "14197783254009016118"
+        "file": "pkgs/Jenkinsfile",
+        "hash": "2470515102388406338"
       },
       {
-        "file": ".prettierignore",
-        "hash": "14688272390704683536"
+        "file": "pkgs/redeploy.sh",
+        "hash": "8427791571749757349"
+      },
+      {
+        "file": "package.json",
+        "hash": "7589628876614969656"
+      },
+      {
+        "file": "pkgs/Chart.yaml",
+        "hash": "17374145215697827592"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "14534483444115666953"
+      },
+      {
+        "file": "pkgs/templates/ingress-ui-oauth.yaml",
+        "hash": "11173505661760426444"
+      },
+      {
+        "file": "pkgs/values-staging.yaml",
+        "hash": "14272116005513902742"
+      },
+      {
+        "file": "pkgs/values-dev2.yaml",
+        "hash": "3662260849745541544"
+      },
+      {
+        "file": "pkgs/README.md",
+        "hash": "14235379496366237342"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "16511203578912307040"
+      },
+      {
+        "file": "pkgs/firebase-prod.json",
+        "hash": "11105480709585086428"
+      },
+      {
+        "file": "pkgs/templates/service.yml",
+        "hash": "5865300179653877860"
+      },
+      {
+        "file": "pkgs/env/dev-v2/service-account.json",
+        "hash": "9778784425226758154"
+      },
+      {
+        "file": "pkgs/templates/ingress-ui-assets.yaml",
+        "hash": "15170225123566177203"
+      },
+      {
+        "file": "pkgs/values-dev-v2.yaml",
+        "hash": "9072692306877440676"
+      },
+      {
+        "file": "pkgs/templates/secrets.yaml",
+        "hash": "17337242663456154827"
+      },
+      {
+        "file": "rebuild.sh",
+        "hash": "14401444918181955742"
+      },
+      {
+        "file": "packages/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "nx.json",
+        "hash": "5400372528874584058"
+      },
+      {
+        "file": "pkgs/values-prod.yaml",
+        "hash": "1239943954439812637"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "1379983966652230747"
       },
       {
         "file": ".prettierrc",
@@ -32,42 +108,58 @@
       },
       {
         "file": "README.md",
-        "hash": "898554708162210270"
+        "hash": "7561548398243383679"
       },
       {
-        "file": "nx.json",
-        "hash": "5400372528874584058"
+        "file": "pkgs/values.yaml",
+        "hash": "15991005542291948155"
       },
       {
-        "file": "package-lock.json",
-        "hash": "16511203578912307040"
+        "file": "pkgs/templates/ingress-oauth2.yaml",
+        "hash": "9132013421872829227"
       },
       {
-        "file": "package.json",
-        "hash": "7589628876614969656"
+        "file": "pkgs/values-dev.yaml",
+        "hash": "15031603845650940485"
       },
       {
-        "file": "packages/.gitkeep",
-        "hash": "3244421341483603138"
+        "file": "pkgs/templates/ingress-ui.yaml",
+        "hash": "14136661849024907459"
       },
       {
-        "file": "rebuild.sh",
-        "hash": "14401444918181955742"
+        "file": "pkgs/templates/ingress-api.yaml",
+        "hash": "6361107966987706100"
       },
       {
-        "file": "tsconfig.base.json",
-        "hash": "14534483444115666953"
+        "file": "pkgs/firebase-dev.json",
+        "hash": "11105480709585086428"
       },
       {
-        "file": "tsconfig.json",
-        "hash": "1379983966652230747"
+        "file": ".gitignore",
+        "hash": "5066592125742341641"
+      },
+      {
+        "file": "pkgs/.helmignore",
+        "hash": "9835375496508434033"
+      },
+      {
+        "file": "pkgs/templates/deployment.yml",
+        "hash": "111709381971108339"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "14688272390704683536"
       }
     ],
     "projectFileMap": {
       "authorization-service": [
         {
+          "file": "apps/authorization-service/README.md",
+          "hash": "16183804605028898548"
+        },
+        {
           "file": "apps/authorization-service/build.gradle.kts",
-          "hash": "16521884735907348114"
+          "hash": "946318395679128888"
         },
         {
           "file": "apps/authorization-service/gradle/wrapper/gradle-wrapper.jar",
@@ -107,7 +199,7 @@
         },
         {
           "file": "apps/authorization-service/src/main/java/com/infra/authorization/config/SecurityConfiguration.java",
-          "hash": "644652291138788635"
+          "hash": "12903933766432503737"
         },
         {
           "file": "apps/authorization-service/src/main/java/com/infra/authorization/config/WebMvcConfig.java",
@@ -119,11 +211,11 @@
         },
         {
           "file": "apps/authorization-service/src/main/java/com/infra/authorization/controller/AuthController.java",
-          "hash": "12080553269992885654"
+          "hash": "6896915238804563652"
         },
         {
           "file": "apps/authorization-service/src/main/java/com/infra/authorization/controller/UserController.java",
-          "hash": "17302381557708931370"
+          "hash": "12696905546335224859"
         },
         {
           "file": "apps/authorization-service/src/main/java/com/infra/authorization/controller/dto/PasswordResetRequest.java",
@@ -183,7 +275,7 @@
         },
         {
           "file": "apps/authorization-service/src/main/java/com/infra/authorization/model/UserDetail.java",
-          "hash": "8826050737324658929"
+          "hash": "11577887927380061011"
         },
         {
           "file": "apps/authorization-service/src/main/java/com/infra/authorization/persistence/entities/AuthProvider.java",
@@ -243,7 +335,7 @@
         },
         {
           "file": "apps/authorization-service/src/main/java/com/infra/authorization/services/security/oauth2/CustomOIDCOAuth2UserService.java",
-          "hash": "11916119629030704863"
+          "hash": "2076209609455733537"
         },
         {
           "file": "apps/authorization-service/src/main/java/com/infra/authorization/services/security/oauth2/HttpCookieOAuth2AuthorizationRequestRepository.java",
@@ -291,7 +383,7 @@
         },
         {
           "file": "apps/authorization-service/src/main/resources/application.yaml",
-          "hash": "10759734476615553271"
+          "hash": "10795156117766028851"
         },
         {
           "file": "apps/authorization-service/src/main/resources/db/baseline.sql",
@@ -348,6 +440,10 @@
         {
           "file": "apps/authorization-service/src/main/resources/db/drop.sql",
           "hash": "458263389048760753"
+        },
+        {
+          "file": "apps/authorization-service/src/main/resources/sample_response",
+          "hash": "9189956324663537443"
         },
         {
           "file": "apps/authorization-service/src/test/java/com/infra/authorization/AuthorizationServiceApplicationTests.java",

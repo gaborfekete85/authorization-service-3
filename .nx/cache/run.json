@@ -1,8 +1,8 @@
 {
   "run": {
     "command": "nx run authorization-service:build",
-    "startTime": "2024-11-11T00:29:43.676Z",
-    "endTime": "2024-11-11T00:29:52.318Z",
+    "startTime": "2024-11-17T16:55:34.032Z",
+    "endTime": "2024-11-17T16:55:42.407Z",
     "inner": false
   },
   "tasks": [
@@ -10,9 +10,9 @@
       "taskId": "authorization-service:build",
       "target": "build",
       "projectName": "authorization-service",
-      "hash": "12957979109381346706",
-      "startTime": "2024-11-11T00:29:43.706Z",
-      "endTime": "2024-11-11T00:29:52.315Z",
+      "hash": "4750566175575652157",
+      "startTime": "2024-11-17T16:55:34.060Z",
+      "endTime": "2024-11-17T16:55:42.407Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 0

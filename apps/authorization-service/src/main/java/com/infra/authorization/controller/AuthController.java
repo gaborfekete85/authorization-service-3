@@ -69,4 +69,11 @@ public class AuthController {
         return ResponseEntity.ok(response);
     }
 
+    @PostMapping("/login")
+    public ResponseEntity<?> login(@Valid @RequestBody SignInRequest signInRequest) {
+        log.info("Log in: {}", signInRequest.getEmail());
+        User userToLogin = userDetailMapper.mapFromSignInRequestToDomain(signInRequest);
+        SignInResponse response = authenticationService.signin(UserDetail.of(userToLogin));
+        return ResponseEntity.ok(response);
+    }
 }

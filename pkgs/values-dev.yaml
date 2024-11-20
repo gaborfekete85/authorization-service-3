@@ -25,7 +25,7 @@ service:
     serviceName: rewura-authorization-service
     port: 8302
     portType: LoadBalancer
-    image: gabendockerzone/authorization-service-3:dc6ee87
+    image: gabendockerzone/authorization-service-3:latest
     componentSelector: server
     environment: 
       - name: 'DATASOURCE_URL'
@@ -52,7 +52,7 @@ service:
     serviceName: rewura-hobby-service
     port: 8304
     portType: ClusterIP
-    image: gabendockerzone/hobby-service:b35f572
+    image: gabendockerzone/hobby-service:latest
     componentSelector: server-hobby
     environment: 
       - name: 'DATASOURCE_URL'
@@ -63,6 +63,27 @@ service:
         value: 'qUHB7r7Viw'
       - name: AUTH_SERVICE_ENDPOINT
         value: 'http://rewura-authorization-service:8302/api/auth'
+      - name: JWT_KEY
+        value: 984050a14efc4eae2555729d6eaf0f78329bdf2eed1dc81219df675ede353f6e05b2ecf6335e0bacbabf21e4ac245663634cf1270
+  appointment: 
+    serviceName: rewura-appointment-service
+    port: 8305
+    portType: ClusterIP
+    image: gabendockerzone/appointment-service:52a719a
+    componentSelector: server
+    environment: 
+      - name: DB_URL
+        value: "mongodb://root:UrGIqo0Q4i@mongo-mongodb.shared:27017"
+      - name: JWT_KEY
+        value: 984050a14efc4eae2555729d6eaf0f78329bdf2eed1dc81219df675ede353f6e05b2ecf6335e0bacbabf21e4ac245663634cf1270
+      - name: DB_PLATFORM
+        value: mongo
+      - name: PORT
+        value: "8305"
+      - name: NOTIFICATION_ENDPOINT
+        value: "https://exp.host/--/api/v2/push/send"
+      - name: AUTH_SERVICE_ENDPOINT
+        value: "http://authorization-service:8302/api/auth"
 
   #postgres: 
   #  serviceName: postgres-service
@@ -74,5 +95,5 @@ service:
 autoscaling:
   enabled: false
   minReplicas: 1
-  maxReplicas: 100
+  maxReplicas: 5
   targetCPUUtilizationPercentage: 80
