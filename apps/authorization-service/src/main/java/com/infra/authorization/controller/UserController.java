@@ -7,8 +7,10 @@ import com.infra.authorization.persistence.entities.ERole;
 import com.infra.authorization.persistence.entities.User;
 import com.infra.authorization.persistence.repository.RoleRepository;
 import com.infra.authorization.persistence.repository.UserRepository;
+import com.infra.authorization.services.UserService;
 import com.infra.authorization.utils.SecurityUtil;
 import jakarta.persistence.EntityNotFoundException;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -24,13 +26,12 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/auth")
+@RequiredArgsConstructor
 public class UserController {
 
-    @Autowired
-    private UserRepository userRepository;
-
-    @Autowired
-    private RoleRepository roleRepository;
+    private final UserService userService;
+    private final UserRepository userRepository;
+    private final RoleRepository roleRepository;
 
     @GetMapping("/test")
     public String test() {
@@ -45,18 +46,13 @@ public class UserController {
     @GetMapping("/user/me")
     public User getCurrentUser(final Authentication authentication) {
         UserDetail userPrincipal = (UserDetail) authentication.getPrincipal();
-        User user = userRepository.findByEmail(userPrincipal.getUsername())
-                .orElseThrow(() -> new UsernameNotFoundException("User not found: " + userPrincipal.getUsername()));
-        return user;
+        return userService.findById(UUID.fromString(userPrincipal.getUsername()));
     }
 
     @GetMapping({"/check_token", "/check-token"})
 //    @PreAuthorize("hasRole('USER')")
     public User checkToken(@Autowired Authentication authentication) {
-        UserDetail userPrincipal = (UserDetail) authentication.getPrincipal();
-        User user = userRepository.findByEmail(userPrincipal.getUsername())
-                .orElseThrow(() -> new UsernameNotFoundException("User not found: " + userPrincipal.getUsername()));
-        return user;
+        return this.getCurrentUser(authentication);
     }
 
     @GetMapping("/user/{userId}")
@@ -74,8 +70,7 @@ public class UserController {
     @PostMapping("/user/update")
     @PreAuthorize("hasRole('USER')")
     public User updateUser(Principal principal, @RequestBody UpdateImageRequest updateImageRequest) {
-        String userEmail = SecurityUtil.getUserEmail(principal);
-        User user = userRepository.findByEmail(userEmail).orElseThrow(() -> new EntityNotFoundException("User does not exists: " + userEmail));
+        User user = userService.findById(SecurityUtil.getUserId(principal));
         if(updateImageRequest.getName() != null) {
             user.setName(updateImageRequest.getName());
         }
@@ -102,8 +97,7 @@ public class UserController {
     @PostMapping("/user/update-image")
     @PreAuthorize("hasRole('USER')")
     public User updateImage(Principal principal, @RequestBody UpdateImageRequest updateImageRequest) {
-        String userEmail = SecurityUtil.getUserEmail(principal);
-        User user = userRepository.findByEmail(userEmail).orElseThrow(() -> new EntityNotFoundException("User does not exists: " + userEmail));
+        User user = userService.findById(SecurityUtil.getUserId(principal));
         if(updateImageRequest.getImageUrl() != null) {
             user.setImageUrl(updateImageRequest.getImageUrl());
         }

@@ -2,52 +2,65 @@ package com.infra.authorization.services.jwt;
 
 import com.infra.authorization.config.AppProperties;
 import com.infra.authorization.model.UserDetail;
+import com.infra.authorization.persistence.entities.User;
+import com.infra.authorization.services.UserService;
+import com.infra.authorization.utils.SecurityUtil;
 import io.jsonwebtoken.*;
+import io.jsonwebtoken.impl.DelegateAudienceCollection;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import java.security.Key;
-import java.util.Date;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
 @Slf4j
 public class DefaultJwtService implements JWTService {
 
+    @Value("${app.publicEndpoint}")
+    private String baseUrl;
+
     private final AppProperties appProperties;
-    public String generateToken(UserDetail userDetail) {
-        SecurityContextHolder.getContext().getAuthentication().getAuthorities();
-        return Jwts.builder().subject(userDetail.getUsername())
-                .issuedAt(new Date(System.currentTimeMillis()))
-                .claim("authorities", SecurityContextHolder.getContext().getAuthentication().getAuthorities())
-                .claim("emailVerified", userDetail.getUser().getEmailVerified())
-                .claim("roles", SecurityContextHolder.getContext().getAuthentication().getAuthorities().stream().map( x -> x.getAuthority().replaceAll("ROLE_", "")).toList())
-                .expiration(new Date(System.currentTimeMillis() + appProperties.getAuth().getTokenExpirationMsec()))
-                .signWith(SignatureAlgorithm.HS512, appProperties.getAuth().getTokenSecret())
-                .compact();
+
+    private final UserService userService;
+    public String generateToken(UserDetails userDetail) {
+        return this.createToken(userDetail);
+//        User user = ((UserDetail) userDetail).getUser();
+//        SecurityContextHolder.getContext().getAuthentication().getAuthorities();
+//        return Jwts.builder().subject(user.getId().toString())
+//                .issuedAt(new Date(System.currentTimeMillis()))
+//                .claim("authorities", SecurityContextHolder.getContext().getAuthentication().getAuthorities())
+//                .claim("emailVerified", user.getEmailVerified())
+//                .claim("roles", SecurityContextHolder.getContext().getAuthentication().getAuthorities().stream().map( x -> x.getAuthority().replaceAll("ROLE_", "")).toList())
+//                .expiration(new Date(System.currentTimeMillis() + appProperties.getAuth().getTokenExpirationMsec()))
+//                .signWith(SignatureAlgorithm.HS512, appProperties.getAuth().getTokenSecret())
+//                .compact();
     }
 
-    public String createToken(UserDetail userDetail) {
+    public String createToken(UserDetails userDetail) {
+        User user = userService.findByEmail(userDetail.getUsername());
         Date now = new Date();
         Date expiryDate = new Date(now.getTime() + appProperties.getAuth().getTokenExpirationMsec());
 
         return Jwts.builder()
-                .setSubject(userDetail.getUsername())
+                .setSubject(user.getId().toString())
                 .setIssuedAt(new Date())
                 .setExpiration(expiryDate)
-                .claim("authorities", SecurityContextHolder.getContext().getAuthentication().getAuthorities())
-                .claim("emailVerified", userDetail.getUser().getEmailVerified())
+//                .claim("authorities", SecurityContextHolder.getContext().getAuthentication().getAuthorities())
+                .claim("email", user.getEmail())
+//                .claim("emailVerified", user.getEmailVerified())
                 .claim("roles", SecurityContextHolder.getContext().getAuthentication().getAuthorities().stream().map( x -> x.getAuthority().replaceAll("ROLE_", "")).toList())
-                .setIssuer(userDetail.getUsername())
+                .setIssuer(baseUrl)
                 .signWith(SignatureAlgorithm.HS512, appProperties.getAuth().getTokenSecret())
                 .compact();
     }
@@ -60,8 +73,11 @@ public class DefaultJwtService implements JWTService {
                 .compact();
     }
 
+    public UUID getUserId(String token) {
+        return UUID.fromString(Objects.requireNonNull(extractClaim(token, Claims::getSubject)));
+    }
     public String getUserName(String token) {
-        return extractClaim(token, Claims::getSubject);
+        return extractClaim(token, (x) -> x.get("email").toString());
     }
     private <T> T extractClaim(String token, Function<Claims, T> claimsResolver) {
         Claims claims = extractClaims(token);
@@ -100,6 +116,20 @@ public class DefaultJwtService implements JWTService {
 
     private boolean isTokenExpired(final String token) {
         return extractClaim(token, Claims::getExpiration).before(new Date());
+    }
+
+    public Map<String, Object> getClaims(String token) {
+        Claims claims = extractClaims(token);
+        List<String> roles = claims.get("roles", List.class);
+        Set<String> rolesPrefixed = roles.stream().map(x -> String.format("%s_%s", SecurityUtil.ROLE_PREFIX, x)).collect(Collectors.toSet());
+        return Map.of(
+                Claims.SUBJECT, claims.getSubject(),
+                Claims.ISSUED_AT, claims.getIssuedAt(),
+                Claims.EXPIRATION, claims.getExpiration(),
+                Claims.ISSUER, claims.getIssuer(),
+                "email", claims.get("email"),
+                "roles", rolesPrefixed
+        );
     }
 
     public boolean validateToken(String authToken) {

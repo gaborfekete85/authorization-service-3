@@ -41,10 +41,7 @@ spring:
             clientId: ${GOOGLE_CLIENT_ID:912050282042-ais7fbu2uns1u3go9eoe6l8iaiv3iruo.apps.googleusercontent.com}
             clientSecret: ${GOOGLE_CLIENT_SECRET:5Ex-92yP7Q1YU_TmgtVXiYR5}
             redirectUri: "${BASE_URL:http://localhost:8300}/oauth2/callback/{registrationId}" # Registered in facebook developer portal: https://cloudbookings.com/oauth2/callback
-            authorization-grant-type: authorization_code
-            client-name: Google
             scope:
-              - openid
               - email
               - profile
           facebook:

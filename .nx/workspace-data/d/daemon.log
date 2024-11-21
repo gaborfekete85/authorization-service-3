@@ -832,3 +832,225 @@ Error: This workspace is more than three days old and is not connected. Workspac
 [NX Daemon Server] - 2024-11-17T23:25:10.510Z - [WATCHER]: Stopping the watcher for /Users/gaborfekete/home_projects/nx/authorization-service (sources)
 [NX Daemon Server] - 2024-11-17T23:25:10.510Z - [WATCHER]: Stopping the watcher for /Users/gaborfekete/home_projects/nx/authorization-service (outputs)
 [NX Daemon Server] - 2024-11-17T23:25:10.528Z - Server stopped because: "10800000ms of inactivity"
+[NX Daemon Server] - 2024-11-20T23:38:11.865Z - Started listening on: /var/folders/jg/9kr58cnd34q4gwx2sf7gttn00000gn/T/a0ba9a3369aec1cfde0e/d.sock
+[NX Daemon Server] - 2024-11-20T23:38:11.874Z - [WATCHER]: Subscribed to changes within: /Users/gaborfekete/home_projects/nx/authorization-service (native)
+[NX Daemon Server] - 2024-11-20T23:38:11.874Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-20T23:38:11.875Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-11-20T23:38:11.875Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-20T23:38:11.876Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-11-20T23:38:11.994Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-20T23:38:11.994Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-20T23:38:11.994Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-20T23:38:11.997Z - Time taken for 'loadNxPlugins' 117.5162079334259ms
+[NX Daemon Server] - 2024-11-20T23:38:12.015Z - Time taken for 'build-project-configs' 5.3749589920043945ms
+[NX Daemon Server] - 2024-11-20T23:38:12.016Z - Time taken for '@nx/js/typescript:createDependencies' 1.7541251182556152ms
+[NX Daemon Server] - 2024-11-20T23:38:12.024Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-20T23:38:12.024Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-11-20T23:38:12.024Z - Time taken for 'total for creating and serializing project graph' 148.53708291053772ms
+[NX Daemon Server] - 2024-11-20T23:38:12.025Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-11-20T23:38:12.025Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 148. Response time: 1.
+[NX Daemon Server] - 2024-11-20T23:38:12.055Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-11-20T23:38:12.055Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-11-20T23:38:12.055Z - Handled HASH_TASKS. Handling time: 2. Response time: 0.
+[NX Daemon Server] - 2024-11-20T23:38:13.065Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2024-11-20T23:38:13.065Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2024-11-20T23:38:13.065Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 12. Response time: 0.
+[NX Daemon Server] - 2024-11-20T23:38:18.434Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:38:22.110Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:38:22.421Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:38:23.568Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:38:24.057Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-11-20T23:38:24.057Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-11-20T23:38:24.057Z - Handled RECORD_OUTPUTS_HASH. Handling time: 4. Response time: 0.
+[NX Daemon Server] - 2024-11-20T23:38:24.162Z - [REQUEST]: Responding to the client. PROCESS_IN_BACKGROUND
+[NX Daemon Server] - 2024-11-20T23:38:24.162Z - Done responding to the client PROCESS_IN_BACKGROUND
+[NX Daemon Server] - 2024-11-20T23:38:24.162Z - Handled PROCESS_IN_BACKGROUND. Handling time: 71. Response time: 0.
+[NX Daemon Server] - 2024-11-20T23:38:24.162Z - Uploading file artifacts
+[NX Daemon Server] - 2024-11-20T23:38:24.163Z - Done uploading file artifacts
+[NX Daemon Server] - 2024-11-20T23:38:24.163Z - Sending EndRun request
+[NX Daemon Server] - 2024-11-20T23:38:24.190Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-11-20T23:38:24.331Z - Error when sending EndRun
+Error: This workspace is more than three days old and is not connected. Workspaces must be connected within 3 days of creation. Claim your workspace at https://cloud.nx.app
+    at Timeout._onTimeout (/Users/gaborfekete/home_projects/nx/authorization-service/.nx/cache/cloud/2411.15.7.hotfix2/lib/daemon/process-run-end.js:33:4325)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[NX Daemon Server] - 2024-11-20T23:42:44.775Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:42:44.800Z - [WATCHER]: README.md was modified
+[NX Daemon Server] - 2024-11-20T23:42:44.980Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-20T23:42:44.984Z - [REQUEST]: README.md
+[NX Daemon Server] - 2024-11-20T23:42:44.984Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-20T23:42:45.078Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:42:45.081Z - Time taken for 'hash changed files from watcher' 24.3677921295166ms
+[NX Daemon Server] - 2024-11-20T23:42:45.246Z - Time taken for 'build-project-configs' 219.7295000553131ms
+[NX Daemon Server] - 2024-11-20T23:42:45.252Z - Time taken for '@nx/js/typescript:createDependencies' 16.720625162124634ms
+[NX Daemon Server] - 2024-11-20T23:42:45.271Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-20T23:42:45.271Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-20T23:42:45.271Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-20T23:42:45.272Z - Time taken for 'total execution time for createProjectGraph()' 33.88462495803833ms
+[NX Daemon Server] - 2024-11-20T23:42:45.423Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:42:45.484Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:45:21.554Z - [WATCHER]: apps/authorization-service/src/main/java/com/infra/authorization/config/SecurityConfiguration.java was modified
+[NX Daemon Server] - 2024-11-20T23:45:21.554Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:45:21.756Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-20T23:45:21.756Z - [REQUEST]: apps/authorization-service/src/main/java/com/infra/authorization/config/SecurityConfiguration.java
+[NX Daemon Server] - 2024-11-20T23:45:21.756Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-20T23:45:21.758Z - Time taken for 'hash changed files from watcher' 0.280040979385376ms
+[NX Daemon Server] - 2024-11-20T23:45:21.774Z - Time taken for 'build-project-configs' 10.575084209442139ms
+[NX Daemon Server] - 2024-11-20T23:45:21.782Z - Time taken for '@nx/js/typescript:createDependencies' 11.607666969299316ms
+[NX Daemon Server] - 2024-11-20T23:45:21.794Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-20T23:45:21.794Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-20T23:45:21.794Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-20T23:45:21.794Z - Time taken for 'total execution time for createProjectGraph()' 20.925708055496216ms
+[NX Daemon Server] - 2024-11-20T23:46:47.971Z - [WATCHER]: apps/authorization-service/src/main/java/com/infra/authorization/config/SecurityConfiguration.java was modified
+[NX Daemon Server] - 2024-11-20T23:46:47.972Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:46:48.375Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-20T23:46:48.375Z - [REQUEST]: apps/authorization-service/src/main/java/com/infra/authorization/config/SecurityConfiguration.java
+[NX Daemon Server] - 2024-11-20T23:46:48.375Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-20T23:46:48.382Z - Time taken for 'hash changed files from watcher' 0.5807499885559082ms
+[NX Daemon Server] - 2024-11-20T23:46:48.400Z - Time taken for 'build-project-configs' 21.942291975021362ms
+[NX Daemon Server] - 2024-11-20T23:46:48.404Z - Time taken for '@nx/js/typescript:createDependencies' 4.580457925796509ms
+[NX Daemon Server] - 2024-11-20T23:46:48.409Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-20T23:46:48.409Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-20T23:46:48.409Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-20T23:46:48.409Z - Time taken for 'total execution time for createProjectGraph()' 6.604790925979614ms
+[NX Daemon Server] - 2024-11-20T23:46:54.258Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:46:56.882Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:46:57.189Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:46:57.612Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:46:57.989Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:46:58.047Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:46:58.107Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:46:58.186Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:46:58.284Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:46:58.342Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:46:58.420Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:46:58.480Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:46:58.563Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:46:58.629Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:46:58.742Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:46:58.873Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:46:59.015Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:46:59.177Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:46:59.251Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:46:59.338Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:47:00.204Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:47:00.549Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:47:00.674Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:47:01.157Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:47:01.345Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:47:01.946Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:47:02.155Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:47:02.241Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:47:02.960Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:47:03.246Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:47:03.880Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:47:06.450Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:47:06.501Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:47:06.610Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:49:56.267Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:49:59.829Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:49:59.971Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:55:44.407Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:58:04.354Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:58:04.422Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 11 file(s) deleted
+[NX Daemon Server] - 2024-11-20T23:58:05.263Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-20T23:58:05.263Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-20T23:58:05.263Z - [REQUEST]: apps/authorization-service/src/main/java/com/infra/authorization/services/security/oauth2/user/GithubOAuth2UserInfo.java,apps/authorization-service/src/main/java/com/infra/authorization/services/security/oauth2/CustomOIDCOAuth2UserService.java,apps/authorization-service/src/main/java/com/infra/authorization/services/security/oauth2/user/OAuth2UserInfo.java,apps/authorization-service/src/main/java/com/infra/authorization/services/security/oauth2/OAuth2AuthenticationFailureHandler.java,apps/authorization-service/src/main/java/com/infra/authorization/services/security/oauth2/OAuth2AuthenticationSuccessHandler.java,apps/authorization-service/src/main/java/com/infra/authorization/services/security/oauth2/user/CustomOauth2UserInfo.java,apps/authorization-service/src/main/java/com/infra/authorization/services/security/oauth2/CustomOAuth2UserService.java,apps/authorization-service/src/main/java/com/infra/authorization/services/security/oauth2/HttpCookieOAuth2AuthorizationRequestRepository.java,apps/authorization-service/src/main/java/com/infra/authorization/services/security/oauth2/user/GoogleOAuth2UserInfo.java,apps/authorization-service/src/main/java/com/infra/authorization/services/security/oauth2/user/OAuth2UserInfoFactory.java,apps/authorization-service/src/main/java/com/infra/authorization/services/security/oauth2/user/FacebookOAuth2UserInfo.java
+[NX Daemon Server] - 2024-11-20T23:58:05.319Z - Time taken for 'hash changed files from watcher' 2.0370419025421143ms
+[NX Daemon Server] - 2024-11-20T23:58:05.383Z - Time taken for 'build-project-configs' 103.68008279800415ms
+[NX Daemon Server] - 2024-11-20T23:58:05.391Z - Time taken for '@nx/js/typescript:createDependencies' 10.67266583442688ms
+[NX Daemon Server] - 2024-11-20T23:58:05.403Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-20T23:58:05.404Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-20T23:58:05.404Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-20T23:58:05.404Z - Time taken for 'total execution time for createProjectGraph()' 22.56054186820984ms
+[NX Daemon Server] - 2024-11-20T23:58:17.558Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:58:21.699Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:58:22.009Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:58:23.024Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:30.218Z - [WATCHER]: 0 file(s) created or restored, 11 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-20T23:59:30.224Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:31.830Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-20T23:59:31.830Z - [REQUEST]: apps/authorization-service/src/main/java/com/infra/authorization/services/security/oauth2/user/GoogleOAuth2UserInfo.java,apps/authorization-service/src/main/java/com/infra/authorization/services/security/oauth2/user/GithubOAuth2UserInfo.java,apps/authorization-service/src/main/java/com/infra/authorization/services/security/oauth2/user/OAuth2UserInfoFactory.java,apps/authorization-service/src/main/java/com/infra/authorization/services/security/oauth2/CustomOAuth2UserService.java,apps/authorization-service/src/main/java/com/infra/authorization/services/security/oauth2/user/OAuth2UserInfo.java,apps/authorization-service/src/main/java/com/infra/authorization/services/security/oauth2/CustomOIDCOAuth2UserService.java,apps/authorization-service/src/main/java/com/infra/authorization/services/security/oauth2/user/FacebookOAuth2UserInfo.java,apps/authorization-service/src/main/java/com/infra/authorization/services/security/oauth2/OAuth2AuthenticationSuccessHandler.java,apps/authorization-service/src/main/java/com/infra/authorization/services/security/oauth2/HttpCookieOAuth2AuthorizationRequestRepository.java,apps/authorization-service/src/main/java/com/infra/authorization/services/security/oauth2/OAuth2AuthenticationFailureHandler.java,apps/authorization-service/src/main/java/com/infra/authorization/services/security/oauth2/user/CustomOauth2UserInfo.java
+[NX Daemon Server] - 2024-11-20T23:59:31.830Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-20T23:59:31.835Z - Time taken for 'hash changed files from watcher' 3.0772500038146973ms
+[NX Daemon Server] - 2024-11-20T23:59:31.900Z - Time taken for 'build-project-configs' 62.89216709136963ms
+[NX Daemon Server] - 2024-11-20T23:59:31.908Z - Time taken for '@nx/js/typescript:createDependencies' 10.82608413696289ms
+[NX Daemon Server] - 2024-11-20T23:59:31.935Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-20T23:59:31.936Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-20T23:59:31.936Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-20T23:59:31.936Z - Time taken for 'total execution time for createProjectGraph()' 31.069375038146973ms
+[NX Daemon Server] - 2024-11-20T23:59:40.171Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:41.839Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:42.012Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:42.341Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:42.720Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:42.799Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:42.886Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:43.019Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:43.070Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:43.123Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:43.188Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:43.243Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:43.313Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:43.370Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:43.421Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:43.483Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:43.588Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:43.721Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:43.773Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:43.887Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:43.959Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:44.011Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:44.167Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:44.219Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:44.379Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:44.517Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:45.028Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:45.234Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:45.764Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:45.866Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:48.346Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-20T23:59:48.413Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:21.452Z - [WATCHER]: apps/authorization-service/src/main/java/com/infra/authorization/services/security/JdbcUserDetailsService.java was deleted
+[NX Daemon Server] - 2024-11-21T00:03:21.465Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:24.660Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-21T00:03:24.660Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-21T00:03:24.660Z - [REQUEST]: apps/authorization-service/src/main/java/com/infra/authorization/services/security/JdbcUserDetailsService.java
+[NX Daemon Server] - 2024-11-21T00:03:24.663Z - Time taken for 'hash changed files from watcher' 0.1840839385986328ms
+[NX Daemon Server] - 2024-11-21T00:03:24.690Z - Time taken for 'build-project-configs' 24.950709104537964ms
+[NX Daemon Server] - 2024-11-21T00:03:24.698Z - Time taken for 'nx/js/dependencies-and-lockfile:createDependencies' 8.403332948684692ms
+[NX Daemon Server] - 2024-11-21T00:03:24.700Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-21T00:03:24.701Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-21T00:03:24.701Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-21T00:03:24.701Z - Time taken for 'total execution time for createProjectGraph()' 11.933834075927734ms
+[NX Daemon Server] - 2024-11-21T00:03:28.672Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:30.380Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:30.562Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:30.824Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:30.978Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:31.047Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:31.103Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:31.198Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:31.259Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:31.336Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:31.389Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:31.454Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:31.509Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:31.573Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:31.635Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:31.888Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:31.939Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:32.160Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:32.253Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:32.773Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:32.971Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:33.308Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:33.383Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:44.123Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:44.800Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:44.950Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:45.019Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:45.083Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:03:48.848Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:04:11.722Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:04:11.799Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T00:04:11.899Z - [WATCHER]: Processing file changes in outputs

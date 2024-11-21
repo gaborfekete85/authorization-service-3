@@ -1,5 +1,7 @@
 package com.infra.authorization.model;
 
+import com.infra.authorization.persistence.entities.ERole;
+import com.infra.authorization.persistence.entities.Role;
 import com.infra.authorization.persistence.entities.User;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
@@ -21,7 +23,7 @@ public class UserDetail implements UserDetails, OAuth2User, OidcUser {
     private final User user;
     private final Map<String, Object> attributes;
     public UserDetail() {
-        user = new User();
+        user = User.builder().build();
         this.attributes = Map.of();
     }
     public UserDetail(User user) {
@@ -50,7 +52,7 @@ public class UserDetail implements UserDetails, OAuth2User, OidcUser {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Objects.isNull(user.getRoles()) ? Collections.EMPTY_LIST :
-                user.getRoles().stream().map( x -> new SimpleGrantedAuthority(x.getName().name())).toList();
+                user.getRoles().stream().map(x -> new SimpleGrantedAuthority(x.getName().name())).toList();
     }
 
     @Override

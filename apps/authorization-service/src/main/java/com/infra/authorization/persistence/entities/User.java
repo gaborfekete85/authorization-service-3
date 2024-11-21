@@ -2,7 +2,7 @@ package com.infra.authorization.persistence.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.infra.authorization.model.AuthProvider;
-import lombok.Data;
+import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -15,6 +15,10 @@ import java.util.*;
         @UniqueConstraint(columnNames = "email")
 })
 @Data
+@Builder(toBuilder = true)
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
     @Id
     @GeneratedValue(generator = "UUID")
