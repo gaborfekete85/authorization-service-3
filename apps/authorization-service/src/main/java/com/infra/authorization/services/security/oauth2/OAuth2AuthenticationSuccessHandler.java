@@ -85,6 +85,7 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
 
     private boolean isAuthorizedRedirectUri(String uri) {
         return true;
+// TODO: Revisit
 //        URI clientRedirectUri = URI.create(uri);
 //
 //        return appProperties.getOauth2().getAuthorizedRedirectUris()

@@ -2,7 +2,6 @@ package com.infra.authorization.services.security.auth;
 
 import com.infra.authorization.model.UserDetail;
 import com.infra.authorization.services.UserService;
-import com.infra.authorization.services.jwt.JWTService;
 import com.infra.authorization.utils.ValidationUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
