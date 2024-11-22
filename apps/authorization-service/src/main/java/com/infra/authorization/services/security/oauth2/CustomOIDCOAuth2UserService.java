@@ -64,7 +64,7 @@ public class CustomOIDCOAuth2UserService extends OidcUserService {
             user = registerNewUser(oAuth2UserRequest, oAuth2UserInfo);
         }
 
-        return null;
+        return oAuth2User;
     }
 
     private User registerNewUser(OAuth2UserRequest oAuth2UserRequest, OAuth2UserInfo oAuth2UserInfo) {

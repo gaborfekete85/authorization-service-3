@@ -144,7 +144,7 @@ public class SecurityConfiguration {
             return CommonOAuth2Provider.GOOGLE.getBuilder(client)
                     .clientId(clientId)
                     .clientSecret(clientSecret)
-                    .redirectUri("http://localhost:8300/oauth2/callback/{registrationId}")
+                    .redirectUri(baseUrl + "/oauth2/callback/{registrationId}")
                     .build();
         }
 
@@ -152,7 +152,7 @@ public class SecurityConfiguration {
             return CommonOAuth2Provider.FACEBOOK.getBuilder(client)
                     .clientId(clientId)
                     .clientSecret(clientSecret)
-                    .redirectUri("https://localhost:8300/oauth2/callback/{registrationId}")
+                    .redirectUri(baseUrl + "/oauth2/callback/{registrationId}")
                     .build();
         }
         return null;

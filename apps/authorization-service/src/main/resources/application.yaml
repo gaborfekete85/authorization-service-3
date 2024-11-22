@@ -29,7 +29,7 @@ spring:
           custom:
             clientId: "clientId"
             clientSecret: "client-secret"
-            redirectUri: "${baseUrl}/oauth2/callback/{registrationId}"
+            redirectUri: "${BASE_URL:http://localhost:8302}/oauth2/callback/{registrationId}"
             scope:
               - read
               - write
@@ -40,21 +40,21 @@ spring:
           google:
             clientId: ${GOOGLE_CLIENT_ID:912050282042-ais7fbu2uns1u3go9eoe6l8iaiv3iruo.apps.googleusercontent.com}
             clientSecret: ${GOOGLE_CLIENT_SECRET:5Ex-92yP7Q1YU_TmgtVXiYR5}
-            redirectUri: "${baseUrl}/oauth2/callback/{registrationId}" # Registered in facebook developer portal: https://cloudbookings.com/oauth2/callback
+            redirectUri: "${BASE_URL:http://localhost:8302}/oauth2/callback/{registrationId}" # Registered in facebook developer portal: https://cloudbookings.com/oauth2/callback
             scope:
               - email
               - profile
           facebook:
             clientId: ${FACEBOOK_CLIENT_ID:1670650839666976}
             clientSecret: ${FACEBOOK_CLIENT_SECRET:97e1e2cfb217a1730563ad1361bda51c}
-            redirectUri: "${baseUrl}/oauth2/callback/{registrationId}" # Registered in Google developer portal: https://cloudbookings.com/oauth2/callback/google
+            redirectUri: "${BASE_URL:http://localhost:8302}/oauth2/callback/{registrationId}" # Registered in Google developer portal: https://cloudbookings.com/oauth2/callback/google
             scope:
               - email
               - public_profile
           github:
             clientId: d3e47fc2ddd966fa4352
             clientSecret: 3bc0f6b8332f93076354c2a5bada2f5a05aea60d
-            redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
+            redirectUri: "{BASE_URL:http://localhost:8302}/oauth2/callback/{registrationId}"
             scope:
               - user:email
               - read:user
@@ -69,9 +69,9 @@ spring:
             tokenUri: https://graph.facebook.com/v12.0/oauth/access_token
             userInfoUri: https://graph.facebook.com/v12.0/me?fields=id,first_name,middle_name,last_name,name,email,verified,picture.width(250).height(250)
           custom:
-            authorizationUri: ${BASE_URL}/oauth/authorize
-            tokenUri: ${BASE_URL}/oauth/token
-            userInfoUri: ${BASE_URL}/api/auth/user/me
+            authorizationUri: ${BASE_URL:http://localhost:8302}/oauth/authorize
+            tokenUri: ${BASE_URL:http://localhost:8302}/oauth/token
+            userInfoUri: ${BASE_URL:http://localhost:8302}/api/auth/user/me
             userNameAttribute: name
             emailAttribute: email
             userInfoAuthenticationMethod: header
