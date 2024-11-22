@@ -24,9 +24,19 @@ public class JwtUserDetailsService implements UserDetailsService {
         User user = User.builder()
                 .id(UUID.fromString(claims.get(Claims.SUBJECT).toString()))
                 .email(claims.get("email").toString())
-                .roles(((Set<String>) claims.get("roles")).stream().map( x -> new Role(ERole.valueOf(x))).collect(Collectors.toSet()))
+                .roles(((Set<String>) claims.get("roles")).stream()
+                        .filter(JwtUserDetailsService::isRoleRelevant)
+                        .map( x -> new Role(ERole.valueOf(x))).collect(Collectors.toSet()))
                 .build();
         return UserDetail.of(user);
     }
 
+    private static boolean isRoleRelevant(String role) {
+        try {
+            ERole.valueOf(role);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
 }

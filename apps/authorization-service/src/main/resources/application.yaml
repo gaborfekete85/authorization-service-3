@@ -26,17 +26,6 @@ spring:
     oauth2:
       client:
         registration:
-          custom:
-            clientId: "clientId"
-            clientSecret: "client-secret"
-            redirectUri: "${BASE_URL:http://localhost:8302}/oauth2/callback/{registrationId}"
-            scope:
-              - read
-              - write
-            clientName: "customClient"
-            provider: "custom"
-            clientAuthenticationMethod: basic
-            authorizationGrantType: authorization_code
           google:
             clientId: ${GOOGLE_CLIENT_ID:912050282042-ais7fbu2uns1u3go9eoe6l8iaiv3iruo.apps.googleusercontent.com}
             clientSecret: ${GOOGLE_CLIENT_SECRET:5Ex-92yP7Q1YU_TmgtVXiYR5}
@@ -44,6 +33,7 @@ spring:
             scope:
               - email
               - profile
+              - openid
           facebook:
             clientId: ${FACEBOOK_CLIENT_ID:1670650839666976}
             clientSecret: ${FACEBOOK_CLIENT_SECRET:97e1e2cfb217a1730563ad1361bda51c}
@@ -59,11 +49,11 @@ spring:
               - user:email
               - read:user
         provider:
-          google:
-            authorization-uri: https://accounts.google.com/o/oauth2/auth
-            token-uri: https://oauth2.googleapis.com/token
-            user-info-uri: https://www.googleapis.com/oauth2/v3/userinfo
-            user-name-attribute: email
+#          google:
+#            authorization-uri: https://accounts.google.com/o/oauth2/auth
+#            token-uri: https://oauth2.googleapis.com/token
+#            user-info-uri: https://www.googleapis.com/oauth2/v3/userinfo
+#            user-name-attribute: email
           facebook:
             authorizationUri: https://www.facebook.com/v12.0/dialog/oauth
             tokenUri: https://graph.facebook.com/v12.0/oauth/access_token

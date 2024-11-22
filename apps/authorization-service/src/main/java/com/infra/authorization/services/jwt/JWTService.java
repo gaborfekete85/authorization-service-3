@@ -2,10 +2,12 @@ package com.infra.authorization.services.jwt;
 
 import com.infra.authorization.config.AppProperties;
 import com.infra.authorization.model.UserDetail;
+import com.infra.authorization.persistence.entities.Role;
 import com.infra.authorization.persistence.entities.User;
 import com.infra.authorization.services.UserService;
 import com.infra.authorization.utils.SecurityUtil;
 import io.jsonwebtoken.*;
+import io.jsonwebtoken.lang.Strings;
 import io.jsonwebtoken.security.Keys;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -31,17 +33,21 @@ public class JWTService {
 
     private final UserService userService;
 
+    private final String ROLE_PREFIX = "ROLE_";
+
     public String createToken(UserDetails userDetail) {
         User user = userService.findByEmail(userDetail.getUsername());
         Date now = new Date();
         Date expiryDate = new Date(now.getTime() + appProperties.getAuth().getTokenExpirationMsec());
+//        List<String> userRoles = user.getRoles().stream().map(x -> x.getName().name()).toList();
+//        List<String> userRoles = SecurityContextHolder.getContext().getAuthentication().getAuthorities().stream().map(x -> x.getAuthority().replaceAll("ROLE_", "")).toList();
 
         return Jwts.builder()
                 .subject(user.getId().toString())
                 .issuedAt(new Date())
                 .expiration(expiryDate)
                 .claim("email", user.getEmail())
-                .claim("roles", SecurityContextHolder.getContext().getAuthentication().getAuthorities().stream().map( x -> x.getAuthority().replaceAll("ROLE_", "")).toList())
+                .claim("roles", user.getRoles().stream().map(x -> x.getName().name().replaceAll(ROLE_PREFIX, Strings.EMPTY)).toList())
                 .issuer(baseUrl)
                 .signWith(SignatureAlgorithm.HS512, appProperties.getAuth().getTokenSecret())
                 .compact();
