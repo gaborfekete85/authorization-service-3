@@ -3,6 +3,8 @@ package com.infra.authorization.services.security.oauth2;
 import com.infra.authorization.config.AppProperties;
 import com.infra.authorization.exception.BadRequestException;
 import com.infra.authorization.model.UserDetail;
+import com.infra.authorization.persistence.entities.User;
+import com.infra.authorization.services.UserService;
 import com.infra.authorization.services.jwt.JWTService;
 import com.infra.authorization.utils.CookieUtils;
 import org.slf4j.Logger;
@@ -10,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.oauth2.core.oidc.user.DefaultOidcUser;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -28,6 +31,8 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
     private static final Logger logger = LoggerFactory.getLogger(OAuth2AuthenticationSuccessHandler.class);
     private JWTService jwtService;
 
+    @Autowired
+    private UserService userService;
     private AppProperties appProperties;
 
     private HttpCookieOAuth2AuthorizationRequestRepository httpCookieOAuth2AuthorizationRequestRepository;
@@ -71,7 +76,19 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
 
         String targetUrl = redirectUri.orElse(getDefaultTargetUrl());
 
-        String token = jwtService.createToken((UserDetail) authentication.getPrincipal());
+        UserDetail userDetail = null;
+        if(authentication.getPrincipal() instanceof UserDetail) {
+            userDetail = (UserDetail) authentication.getPrincipal();
+        }
+
+        if(authentication.getPrincipal() instanceof DefaultOidcUser) {
+            DefaultOidcUser u = (DefaultOidcUser) authentication.getPrincipal();
+            String email = u.getEmail();
+            User user = userService.findByEmail(email);
+            userDetail = UserDetail.of(user);
+        }
+
+        String token = jwtService.createToken(userDetail);
 
         return UriComponentsBuilder.fromUriString(targetUrl)
                 .queryParam("token", token)
@@ -85,6 +102,7 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
 
     private boolean isAuthorizedRedirectUri(String uri) {
         return true;
+// TODO: Revisit
 //        URI clientRedirectUri = URI.create(uri);
 //
 //        return appProperties.getOauth2().getAuthorizedRedirectUris()

@@ -1,4 +1,5 @@
 HELP.md
+.DS_Store
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
@@ -35,3 +36,167 @@ out/
 
 ### VS Code ###
 .vscode/
+
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+dist
+tmp
+/out-tsc
+
+# dependencies
+node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+
+.nx/cache
+
+# TechX
+.nx-container
+.env
+.envrc
+*.iml
+.gitlab-cd.yml
+**/*schema.d.ts
+CHANGELOG.md
+profile.json
+.m2
+migrations.json
+
+# Maven
+.m2/**
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+!.mvn/wrapper/maven-wrapper.jar
+.flattened-pom.xml
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+dist
+tmp
+/out-tsc
+
+# dependencies
+node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+.pnpm-store
+
+# System Files
+.DS_Store
+Thumbs.db
+
+.nx/cache/
+.nx/
+
+# TechX
+.nx-container
+.env
+.envrc
+*.iml
+.gitlab-cd.yml
+**/*schema.d.ts
+CHANGELOG.md
+profile.json
+.m2
+migrations.json
+
+# Maven
+.m2/**
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+!.mvn/wrapper/maven-wrapper.jar
+.flattened-pom.xml
+
+##############################################################
+# Custom
+HELP.md
+logs/
+whitesource/
+!**/src/main/**
+!**/src/test/**
+
+### STS ###
+.apt_generated
+.factorypath
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.ipr
+
+# DB
+*.db
+
+# Node
+**/node_modules/
+*.m2/
+*/build
+
+# Diagrams
+*.png.bkp
+
+# Reconciliation files
+**/src/test/resources/exports/**/*.json
+**/job-exports/**/*.json
+
+**/${env.TECHX_MAVEN_REPO_PATH}

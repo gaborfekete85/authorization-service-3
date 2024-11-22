@@ -1,0 +1,99 @@
+application: 
+  host: dev.rewura.com
+env: dev
+
+ingress: 
+  api: 
+    fullName: nginx-ingress-api-dev
+  oauth2: 
+    fullName: nginx-ingress-oauth2-dev
+  frontend: 
+    fullName: nginx-ingress-frontend-dev
+  frontend_oauth: 
+    fullName: nginx-ingress-frontend-oauth-dev
+  frontend_assets: 
+    fullName: nginx-ingress-frontend-assets-dev
+
+service:
+  frontend: 
+    serviceName: rewura-frontend-service
+    port: 8301
+    portType: ClusterIP
+    image: gabendockerzone/rewura-frontend:e6be2ac
+    componentSelector: web
+  authorization: 
+    serviceName: rewura-authorization-service
+    port: 8302
+    portType: LoadBalancer
+    image: gabendockerzone/authorization-service-3:latest
+    componentSelector: server
+    environment: 
+      - name: 'DATASOURCE_URL'
+        value: 'jdbc:postgresql://139.59.207.177:5432/postgres?currentSchema=rewura_dev_auth'
+      - name: 'DATASOURCE_USER'
+        value: 'postgres'
+      - name: 'DATASOURCE_PASSWORD'
+        value: 'qUHB7r7Viw'
+      - name: GOOGLE_CLIENT_ID
+        value: '912050282042-ais7fbu2uns1u3go9eoe6l8iaiv3iruo.apps.googleusercontent.com'
+      - name: GOOGLE_CLIENT_SECRET
+        value: '5Ex-92yP7Q1YU_TmgtVXiYR5'
+      - name: FACEBOOK_CLIENT_ID
+        value: '1670650839666976'
+      - name: FACEBOOK_CLIENT_SECRET
+        value: '97e1e2cfb217a1730563ad1361bda51c'
+  file: 
+    serviceName: rewura-file-upload-service
+    port: 8303
+    portType: ClusterIP
+    image: gabendockerzone/file-upload-service:20aad91
+    componentSelector: server-file
+  hobby: 
+    serviceName: rewura-hobby-service
+    port: 8304
+    portType: ClusterIP
+    image: gabendockerzone/hobby-service:latest
+    componentSelector: server-hobby
+    environment: 
+      - name: 'DATASOURCE_URL'
+        value: 'jdbc:postgresql://139.59.207.177:5432/postgres?currentSchema=rewura_dev'
+      - name: 'DATASOURCE_USER'
+        value: 'postgres'
+      - name: 'DATASOURCE_PASSWORD'
+        value: 'qUHB7r7Viw'
+      - name: AUTH_SERVICE_ENDPOINT
+        value: 'http://rewura-authorization-service:8302/api/auth'
+      - name: JWT_KEY
+        value: 984050a14efc4eae2555729d6eaf0f78329bdf2eed1dc81219df675ede353f6e05b2ecf6335e0bacbabf21e4ac245663634cf1270
+  appointment: 
+    serviceName: rewura-appointment-service
+    port: 8305
+    portType: ClusterIP
+    image: gabendockerzone/appointment-service:52a719a
+    componentSelector: server
+    environment: 
+      - name: DB_URL
+        value: "mongodb://root:UrGIqo0Q4i@mongo-mongodb.shared:27017"
+      - name: JWT_KEY
+        value: 984050a14efc4eae2555729d6eaf0f78329bdf2eed1dc81219df675ede353f6e05b2ecf6335e0bacbabf21e4ac245663634cf1270
+      - name: DB_PLATFORM
+        value: mongo
+      - name: PORT
+        value: "8305"
+      - name: NOTIFICATION_ENDPOINT
+        value: "https://exp.host/--/api/v2/push/send"
+      - name: AUTH_SERVICE_ENDPOINT
+        value: "http://authorization-service:8302/api/auth"
+
+  #postgres: 
+  #  serviceName: postgres-service
+  #  port: 5432
+  #  portType: NodePort
+  #  image: postgres
+  #  componentSelector: postgres
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 80

@@ -11,6 +11,7 @@ import com.infra.authorization.persistence.entities.Role;
 import com.infra.authorization.persistence.entities.User;
 import com.infra.authorization.persistence.repository.RoleRepository;
 import com.infra.authorization.persistence.repository.UserRepository;
+import com.infra.authorization.services.UserService;
 import com.infra.authorization.services.jwt.JWTService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -20,17 +21,20 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
 @Slf4j
 public class AuthenticationService {
     private final UserRepository userRepository;
+    private final UserService userService;
     private final RoleRepository roleRepository;
     private final PasswordEncoder passwordEncoder;
     private final AuthenticationManager authenticationManager;
@@ -46,7 +50,7 @@ public class AuthenticationService {
 
         SecurityContextHolder.getContext().setAuthentication(authentication);
 
-        String token = jwtService.createToken(userDetail);
+        String token = jwtService.createToken((UserDetails) authentication.getPrincipal());
         String userName = jwtService.getUserName(token);
         String refreshToken = jwtService.generateRefreshToken(Map.of(), userDetail);
 
@@ -54,11 +58,10 @@ public class AuthenticationService {
     }
 
     public SignInResponse refreshToken(RefreshTokenRequest refreshTokenRequest) {
-        String userEmail = jwtService.getUserName(refreshTokenRequest.getRefreshToken());
-        User user = userRepository.findByEmail(userEmail).orElseThrow(() -> new UsernameNotFoundException(String.format("User not found with user id: %s", userEmail)));
+        User user = userService.findById(jwtService.getUserId(refreshTokenRequest.getRefreshToken()));
         UserDetail userDetail = UserDetail.of(user);
         if(jwtService.isTokenValid(refreshTokenRequest.getRefreshToken(), userDetail)) {
-            String token = jwtService.generateToken(userDetail);
+            String token = jwtService.createToken(userDetail);
             return SignInResponse.builder().tokenType("Bearer").accessToken(token).refreshToken(refreshTokenRequest.getRefreshToken()).build();
         }
         return null;

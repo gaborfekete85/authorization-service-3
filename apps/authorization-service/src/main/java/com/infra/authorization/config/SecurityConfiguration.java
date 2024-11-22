@@ -1,8 +1,7 @@
 package com.infra.authorization.config;
 
 import com.infra.authorization.persistence.entities.AuthProvider;
-import com.infra.authorization.persistence.entities.ERole;
-import com.infra.authorization.services.security.filter.CustomSavedRequestFilter;
+import com.infra.authorization.services.security.filter.JdbcAuthenticationFilter;
 import com.infra.authorization.services.security.auth.RestAuthenticationEntryPoint;
 import com.infra.authorization.services.security.filter.JwtAuthenticationFilter;
 import com.infra.authorization.services.security.oauth2.CustomOAuth2UserService;
@@ -10,6 +9,7 @@ import com.infra.authorization.services.security.oauth2.HttpCookieOAuth2Authoriz
 import com.infra.authorization.services.security.oauth2.OAuth2AuthenticationFailureHandler;
 import com.infra.authorization.services.security.oauth2.OAuth2AuthenticationSuccessHandler;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
@@ -17,7 +17,6 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.BeanIds;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -28,13 +27,13 @@ import org.springframework.security.config.oauth2.client.CommonOAuth2Provider;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.client.oidc.userinfo.OidcUserService;
 import org.springframework.security.oauth2.client.registration.ClientRegistration;
 import org.springframework.security.oauth2.client.registration.ClientRegistrationRepository;
 import org.springframework.security.oauth2.client.registration.InMemoryClientRegistrationRepository;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -44,10 +43,15 @@ import java.util.stream.Collectors;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfiguration {
     private static String CLIENT_PROPERTY_KEY = "spring.security.oauth2.client.registration.";
+
+    @Value("${app.publicEndpoint}")
+    private String baseUrl;
+
     private static final List<String> clients = List.of(AuthProvider.google.name().toLowerCase(), AuthProvider.facebook.name().toLowerCase());
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
-    private final UserDetailsService userDetailsService;
+    private final UserDetailsService jdbcUserDetailsService;
     private final CustomOAuth2UserService customOAuth2UserService;
+    private final OidcUserService customOIDCOAuth2UserService;
     private final OAuth2AuthenticationSuccessHandler oAuth2AuthenticationSuccessHandler;
     private final OAuth2AuthenticationFailureHandler oAuth2AuthenticationFailureHandler;
     private final Environment environment;
@@ -78,7 +82,9 @@ public class SecurityConfiguration {
                 .oauth2Login(oauth -> {
                     oauth.authorizationEndpoint(ep -> ep.baseUri("/oauth2/authorize").authorizationRequestRepository(cookieAuthorizationRequestRepository()))
                             .redirectionEndpoint(r -> r.baseUri("/oauth2/callback/*"))
-                            .userInfoEndpoint(e -> e.userService(customOAuth2UserService))
+                            .userInfoEndpoint(e -> e
+                                    .oidcUserService(customOIDCOAuth2UserService)
+                                    .userService(customOAuth2UserService))
                             .successHandler(oAuth2AuthenticationSuccessHandler)
                             .failureHandler(oAuth2AuthenticationFailureHandler);
                         }
@@ -88,11 +94,12 @@ public class SecurityConfiguration {
                 .sessionManagement(manager -> manager.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authenticationProvider())
                     .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
-                    .addFilterBefore(customSavedRequestFilter(), UsernamePasswordAuthenticationFilter.class);
+//                    .addFilterBefore(customSavedRequestFilter(), UsernamePasswordAuthenticationFilter.class)
+        ;
         return http.build();
     }
 
-    public CustomSavedRequestFilter customSavedRequestFilter() { return new CustomSavedRequestFilter(); }
+    public JdbcAuthenticationFilter customSavedRequestFilter() { return new JdbcAuthenticationFilter(); }
     @Bean
     public HttpCookieOAuth2AuthorizationRequestRepository cookieAuthorizationRequestRepository() {
         return new HttpCookieOAuth2AuthorizationRequestRepository();
@@ -101,7 +108,7 @@ public class SecurityConfiguration {
     @Bean
     public AuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
-        authProvider.setUserDetailsService(userDetailsService);
+        authProvider.setUserDetailsService(jdbcUserDetailsService);
         authProvider.setPasswordEncoder(passwordEncoder());
         return authProvider;
     }
@@ -137,7 +144,7 @@ public class SecurityConfiguration {
             return CommonOAuth2Provider.GOOGLE.getBuilder(client)
                     .clientId(clientId)
                     .clientSecret(clientSecret)
-                    .redirectUri("http://localhost:8300/oauth2/callback/{registrationId}")
+                    .redirectUri(baseUrl + "/oauth2/callback/{registrationId}")
                     .build();
         }
 
@@ -145,7 +152,7 @@ public class SecurityConfiguration {
             return CommonOAuth2Provider.FACEBOOK.getBuilder(client)
                     .clientId(clientId)
                     .clientSecret(clientSecret)
-                    .redirectUri("https://localhost:8300/oauth2/callback/{registrationId}")
+                    .redirectUri(baseUrl + "/oauth2/callback/{registrationId}")
                     .build();
         }
         return null;

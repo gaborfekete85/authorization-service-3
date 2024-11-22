@@ -1,5 +1,24 @@
 # AuthorizationService
 
+# Build
+```
+nx run authorization-service:build
+```
+
+
+# Useful links
+ - https://hpanel.hostinger.com/websites/rewura.com
+   - Host rewura.com
+ - https://www.cloudflare.com/en-gb/
+   - HTTPS: Redirection of rewura.com
+ - https://hub.docker.com/
+   - Docker images
+ - Oauth Google
+   - https://console.cloud.google.com/auth/clients/912050282042-ais7fbu2uns1u3go9eoe6l8iaiv3iruo.apps.googleusercontent.com?project=pppp-59919
+
+
+   
+   
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
 ✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.

@@ -7,8 +7,10 @@ import com.infra.authorization.persistence.entities.ERole;
 import com.infra.authorization.persistence.entities.User;
 import com.infra.authorization.persistence.repository.RoleRepository;
 import com.infra.authorization.persistence.repository.UserRepository;
+import com.infra.authorization.services.UserService;
 import com.infra.authorization.services.security.oauth2.user.OAuth2UserInfo;
 import com.infra.authorization.services.security.oauth2.user.OAuth2UserInfoFactory;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.InternalAuthenticationServiceException;
 import org.springframework.security.core.AuthenticationException;
@@ -19,17 +21,17 @@ import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
 
 @Service
+@RequiredArgsConstructor
 public class CustomOAuth2UserService extends DefaultOAuth2UserService {
 
-    @Autowired
-    private UserRepository userRepository;
+    private final UserService userService;
 
-    @Autowired
-    private RoleRepository roleRepository;
+    private final RoleRepository roleRepository;
 
     @Override
     public OAuth2User loadUser(OAuth2UserRequest oAuth2UserRequest) throws OAuth2AuthenticationException {
@@ -51,10 +53,8 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
             throw new OAuth2AuthenticationProcessingException("Email not found from OAuth2 provider");
         }
 
-        Optional<User> userOptional = userRepository.findByEmail(oAuth2UserInfo.getEmail());
-        User user;
-        if(userOptional.isPresent()) {
-            user = userOptional.get();
+        User user = userService.findByEmail(oAuth2UserInfo.getEmail());
+        if(Objects.nonNull(user)) {
             if(!user.getProvider().equals(AuthProvider.valueOf(oAuth2UserRequest.getClientRegistration().getRegistrationId()))) {
                 throw new OAuth2AuthenticationProcessingException("Looks like you're signed up with " +
                         user.getProvider() + " account. Please use your " + user.getProvider() +
@@ -68,7 +68,7 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
     }
 
     private User registerNewUser(OAuth2UserRequest oAuth2UserRequest, OAuth2UserInfo oAuth2UserInfo) {
-        User user = new User();
+        User user = User.builder().build();
 
         user.setProvider(AuthProvider.valueOf(oAuth2UserRequest.getClientRegistration().getRegistrationId()));
         user.setProviderId(oAuth2UserInfo.getId());
@@ -77,13 +77,13 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
         user.setImageUrl(oAuth2UserInfo.getImageUrl());
         user.setRoles(Set.of(roleRepository.findByName(ERole.ROLE_USER)));
 
-        return userRepository.save(user);
+        return userService.saveUser(user);
     }
 
     private User updateExistingUser(User existingUser, OAuth2UserInfo oAuth2UserInfo) {
         existingUser.setName(oAuth2UserInfo.getName());
         existingUser.setImageUrl(oAuth2UserInfo.getImageUrl());
-        return userRepository.save(existingUser);
+        return userService.saveUser(existingUser);
     }
 
 }
