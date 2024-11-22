@@ -46,7 +46,7 @@ public class UserController {
     @GetMapping("/user/me")
     public User getCurrentUser(final Authentication authentication) {
         UserDetail userPrincipal = (UserDetail) authentication.getPrincipal();
-        return userService.findById(UUID.fromString(userPrincipal.getUsername()));
+        return userService.findByEmail(userPrincipal.getUsername());
     }
 
     @GetMapping({"/check_token", "/check-token"})
